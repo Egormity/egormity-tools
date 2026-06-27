@@ -37,7 +37,7 @@ def main():
     if cmd in ("--help", "-h", "help"):
         print_help()
         return
-    if cmd in ("--version", "version"):
+    if cmd in ("--version", "--v", "version"):
         print(f"egormity_git_tools {__version__}")
         return
 
@@ -116,7 +116,7 @@ def print_help():
     print("")
     print("Options:")
     print("  -h, --help                              Show this help message.")
-    print("  --version                               Show the installed tool version.")
+    print("  --version, --v                          Show the installed tool version.")
 
 def require_url(cmd, url):
     if not url:

@@ -11,7 +11,7 @@
 
 ## CLI Conventions
 - Keep `--help`, `help`, `-h`, and no-argument output useful and up to date.
-- Keep `--version` wired to `egormity_git_tools/version.py`.
+- Keep `--version` and `--v` wired to `egormity_git_tools/version.py`.
 - Prefer adding command implementations as separate modules and dispatching to them from `cli.py`.
 
 ## Current Commands

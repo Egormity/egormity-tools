@@ -25,6 +25,7 @@ python -m egormity_git_tools --help
 
 ```powershell
 egormity_git_tools --version
+egormity_git_tools --v
 egormity_git_tools init_clis
 egormity_git_tools get_account_info <url> [filename] [path]
 egormity_git_tools generate_agents <url> [folder] [path]
