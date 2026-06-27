@@ -1,11 +1,19 @@
-import sys
-from _git_tools.auth_git_clis import ensure_all
-from _git_tools.get_account_info_from_url import get_info
-from _git_tools.generate_agents_file import write as write_agents
-from _git_tools.clone_all_repos_from_url import clone_all
-from _git_tools.push_all_current_branch import push_all_current_branch
 import json
 import os
+import sys
+
+try:
+    from .auth_git_clis import ensure_all
+    from .clone_all_repos_from_url import clone_all
+    from .generate_agents_file import write as write_agents
+    from .get_account_info_from_url import get_info
+    from .push_all_current_branch import push_all_current_branch
+except ImportError:
+    from auth_git_clis import ensure_all
+    from clone_all_repos_from_url import clone_all
+    from generate_agents_file import write as write_agents
+    from get_account_info_from_url import get_info
+    from push_all_current_branch import push_all_current_branch
 
 def main():
     if len(sys.argv) < 2:
