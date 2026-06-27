@@ -17,7 +17,7 @@ except ImportError:
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python -m git_tools <cmd> [url] [arg2] [arg3]")
+        print("Usage: python -m egormity_git_tools <cmd> [url] [arg2] [arg3]")
         print("Commands: init, init_clis, get_account_info, generate_agents, clone_all, push_all_current_branch")
         return
 
@@ -84,11 +84,11 @@ def main():
 
 def require_url(cmd, url):
     if not url:
-        raise SystemExit(f"Usage: python -m git_tools {cmd} <url> [arg2] [arg3]")
+        raise SystemExit(f"Usage: python -m egormity_git_tools {cmd} <url> [arg2] [arg3]")
 
 def require_path(cmd, path):
     if not path:
-        raise SystemExit(f"Usage: python -m git_tools {cmd} <path>")
+        raise SystemExit(f"Usage: python -m egormity_git_tools {cmd} <path>")
 
 if __name__ == "__main__":
     try:
