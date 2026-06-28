@@ -24,7 +24,14 @@ def clone(repo, base, account_name):
         return path
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["git", "clone", repo["link"], str(path)], check=True)
+    result = subprocess.run(
+        ["git", "clone", repo["link"], str(path)],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        output = (result.stderr or result.stdout).strip() or "no output"
+        raise RuntimeError(f"git clone failed for {repo['link']} into {path}: {output}")
     return path
 
 

@@ -29,9 +29,12 @@ def discover_repositories(base):
 
 def pull(repo_path):
     print(f"Pulling {repo_path}", flush=True)
-    result = subprocess.run(["git", "pull"], cwd=repo_path)
+    result = subprocess.run(["git", "pull"], cwd=repo_path, capture_output=True, text=True)
     if result.returncode != 0:
-        raise RuntimeError(f"git pull failed in {repo_path}")
+        output = (result.stderr or result.stdout).strip() or "no output"
+        raise RuntimeError(f"git pull failed in {repo_path}: {output}")
+    if result.stdout:
+        print(result.stdout.strip())
 
 
 def pull_all_current_bnach(path):

@@ -32,6 +32,33 @@ COMMANDS = (
 )
 
 
+class CliError(RuntimeError):
+    pass
+
+
+def run_cli():
+    try:
+        main()
+        return 0
+    except KeyboardInterrupt:
+        print("error: interrupted", file=sys.stderr)
+        return 130
+    except SystemExit as exc:
+        return system_exit_code(exc)
+    except Exception as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+
+
+def system_exit_code(exc):
+    if exc.code is None:
+        return 0
+    if isinstance(exc.code, int):
+        return exc.code
+    print(exc.code, file=sys.stderr)
+    return 1
+
+
 def main():
     if len(sys.argv) < 2:
         print_help()
@@ -189,7 +216,13 @@ def print_help():
 def parse_urls(urls):
     parsed = [url.strip() for url in re.split(r"[;,]", urls) if url.strip()]
     if not parsed:
-        raise ValueError("at least one URL is required")
+        raise CliError("at least one URL is required")
+    invalid = [url for url in parsed if re.search(r"\s", url)]
+    if invalid:
+        raise CliError(
+            "URL lists must be separated with commas or semicolons. "
+            f"Found whitespace inside: {invalid[0]}"
+        )
     return parsed
 
 
@@ -254,7 +287,4 @@ def require_path(cmd, path):
         raise SystemExit(f"Usage: python -m egormity_git_tools {cmd} <path>")
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as exc:
-        raise SystemExit(f"error: {exc}")
+    raise SystemExit(run_cli())

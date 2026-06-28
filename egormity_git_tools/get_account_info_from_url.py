@@ -7,7 +7,7 @@ from urllib.parse import quote, urlparse
 class CommandError(RuntimeError):
     def __init__(self, cmd, output):
         self.cmd = cmd
-        self.output = output.strip()
+        self.output = output.strip() or "no output"
         super().__init__(f"{' '.join(cmd)} failed: {self.output}")
 
 
@@ -34,20 +34,30 @@ def parse(url):
         return "github", parts[0]
     if "gitlab.com" in host:
         return "gitlab", "/".join(parts)
-    raise ValueError("unsupported")
+    raise ValueError(f"unsupported account provider in URL: {url}")
+
+
+def parse_json_output(cmd, output):
+    try:
+        return json.loads(output)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(
+            f"{cmd[0]} returned invalid JSON while fetching account info: {exc}"
+        ) from exc
 
 def github(user):
-    return json.loads(run([
+    cmd = [
         "gh","repo","list",user,
         "--limit","200",
         "--json","nameWithOwner,url"
-    ]))
+    ]
+    return parse_json_output(cmd, run(cmd))
 
 def glab_api(endpoint, paginate=False):
     cmd = ["glab", "api", endpoint]
     if paginate:
         cmd.extend(["--paginate", "--output", "json"])
-    return json.loads(run(cmd))
+    return parse_json_output(cmd, run(cmd))
 
 
 def gitlab_user(user):
