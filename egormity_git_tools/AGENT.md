@@ -22,4 +22,5 @@
 - `generate_agents`
 - `clone_all`
 - `init`
+- `pull_all_current_bnach`
 - `push_all_current_branch`

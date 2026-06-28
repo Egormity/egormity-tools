@@ -31,6 +31,7 @@ egormity_git_tools get_account_info <urls> [filename] [path]
 egormity_git_tools generate_agents <urls> [folder] [path]
 egormity_git_tools clone_all <urls> [folder] [path]
 egormity_git_tools init <urls> [folder] [path]
+egormity_git_tools pull_all_current_bnach <path>
 egormity_git_tools push_all_current_branch <path>
 ```
 

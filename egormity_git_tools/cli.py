@@ -9,6 +9,7 @@ try:
     from .clone_all_repos_from_url import clone_all
     from .generate_agents_file import write as write_agents
     from .get_account_info_from_url import get_info
+    from .pull_all_current_bnach import pull_all_current_bnach
     from .push_all_current_branch import push_all_current_branch
 except ImportError:
     from version import __version__
@@ -16,6 +17,7 @@ except ImportError:
     from clone_all_repos_from_url import clone_all
     from generate_agents_file import write as write_agents
     from get_account_info_from_url import get_info
+    from pull_all_current_bnach import pull_all_current_bnach
     from push_all_current_branch import push_all_current_branch
 
 
@@ -25,6 +27,7 @@ COMMANDS = (
     ("generate_agents <urls> [folder] [path]", "Generate an AGENTS.md navigation file for account workspaces."),
     ("clone_all <urls> [folder] [path]", "Clone all repositories from GitHub or GitLab accounts."),
     ("init <urls> [folder] [path]", "Clone all repositories and generate AGENTS.md navigation files."),
+    ("pull_all_current_bnach <path>", "Pull the current branch for every repository under a path."),
     ("push_all_current_branch <path>", "Push the current branch for every repository under a path."),
 )
 
@@ -107,6 +110,11 @@ def main():
         require_path(cmd, url)
         repos = push_all_current_branch(url)
         print(f"Pushed {len(repos)} repositories")
+
+    elif cmd == "pull_all_current_bnach":
+        require_path(cmd, url)
+        repos = pull_all_current_bnach(url)
+        print(f"Pulled {len(repos)} repositories")
 
     else:
         print(f"Unknown command: {cmd}")
