@@ -28,7 +28,7 @@ def discover_repositories(base):
 
 
 def push(repo_path):
-    print(f"Pushing {repo_path}")
+    print(f"Pushing {repo_path}", flush=True)
     result = subprocess.run(["git", "push"], cwd=repo_path)
     if result.returncode != 0:
         raise RuntimeError(f"git push failed in {repo_path}")

@@ -28,7 +28,7 @@ def discover_repositories(base):
 
 
 def pull(repo_path):
-    print(f"Pulling {repo_path}")
+    print(f"Pulling {repo_path}", flush=True)
     result = subprocess.run(["git", "pull"], cwd=repo_path)
     if result.returncode != 0:
         raise RuntimeError(f"git pull failed in {repo_path}")

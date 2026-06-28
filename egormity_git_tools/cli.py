@@ -52,6 +52,7 @@ def main():
 
     if cmd == "init_clis":
         ensure_all()
+        print_overview("init_clis", ["Verified GitHub and GitLab CLI availability and authentication."])
 
     elif cmd == "get_account_info":
         require_url(cmd, url)
@@ -67,6 +68,14 @@ def main():
             json.dump(single_or_many(infos), f, indent=2)
 
         print(full)
+        print_overview(
+            "get_account_info",
+            [
+                f"Fetched metadata for {len(infos)} account(s).",
+                f"Collected {count_repos(infos)} repositories.",
+                f"Wrote JSON metadata to {full}.",
+            ],
+        )
 
     elif cmd == "generate_agents":
         require_url(cmd, url)
@@ -79,12 +88,29 @@ def main():
         write_agents(combine_infos(infos, folder), full_folder)
 
         print(full_folder)
+        print_overview(
+            "generate_agents",
+            [
+                f"Fetched metadata for {len(infos)} account(s).",
+                f"Included {count_repos(infos)} repositories.",
+                f"Wrote AGENTS.md navigation in {full_folder}.",
+            ],
+        )
 
     elif cmd == "clone_all":
         require_url(cmd, url)
         folder = arg2
         path = arg3 or "."
-        clone_all_urls(url, folder, path)
+        infos = get_infos(url)
+        cloned = clone_infos(infos, folder, path)
+        print_overview(
+            "clone_all",
+            [
+                f"Fetched metadata for {len(infos)} account(s).",
+                f"Processed {count_repos(infos)} repositories.",
+                f"Cloned or reused {len(cloned)} workspace folder(s).",
+            ],
+        )
 
     elif cmd == "init":
         require_url(cmd, url)
@@ -105,16 +131,38 @@ def main():
             write_agents(combine_infos(infos, folder), full_folder)
 
         print(full_folder)
+        print_overview(
+            "init",
+            [
+                f"Fetched metadata for {len(infos)} account(s).",
+                f"Cloned or reused {count_repos(infos)} repositories.",
+                f"Generated AGENTS.md navigation under {full_folder}.",
+            ],
+        )
 
     elif cmd == "push_all_current_branch":
         require_path(cmd, url)
         repos = push_all_current_branch(url)
         print(f"Pushed {len(repos)} repositories")
+        print_overview(
+            "push_all_current_branch",
+            [
+                f"Discovered {len(repos)} git repositories under {display_path(url)}.",
+                "Ran git push in each discovered repository.",
+            ],
+        )
 
     elif cmd == "pull_all_current_bnach":
         require_path(cmd, url)
         repos = pull_all_current_bnach(url)
         print(f"Pulled {len(repos)} repositories")
+        print_overview(
+            "pull_all_current_bnach",
+            [
+                f"Discovered {len(repos)} git repositories under {display_path(url)}.",
+                "Ran git pull in each discovered repository.",
+            ],
+        )
 
     else:
         print(f"Unknown command: {cmd}")
@@ -166,10 +214,13 @@ def combine_infos(infos, name):
     }
 
 
-def clone_all_urls(urls, folder, path):
-    infos = get_infos(urls)
+def count_repos(infos):
+    return sum(len(info["repos"]) for info in infos)
+
+
+def clone_infos(infos, folder, path):
     if len(infos) == 1:
-        return clone_all(infos[0]["link"], folder, path, info=infos[0])
+        return [clone_all(infos[0]["link"], folder, path, info=infos[0])]
 
     workspace = os.path.join(path, folder or "workspace")
     os.makedirs(workspace, exist_ok=True)
@@ -177,6 +228,22 @@ def clone_all_urls(urls, folder, path):
     for info in infos:
         cloned.append(clone_all(info["link"], info["name"], workspace, info=info))
     return cloned
+
+
+def clone_all_urls(urls, folder, path):
+    infos = get_infos(urls)
+    return clone_infos(infos, folder, path)
+
+
+def print_overview(command, lines):
+    print("")
+    print(f"Overview for {command}:")
+    for line in lines:
+        print(f"- {line}")
+
+
+def display_path(path):
+    return os.path.abspath(os.path.expanduser(path))
 
 def require_url(cmd, url):
     if not url:
