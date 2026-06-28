@@ -3,11 +3,22 @@ import shutil
 import subprocess
 from urllib.parse import urlparse
 
+
+class CommandError(RuntimeError):
+    def __init__(self, cmd, output):
+        self.cmd = cmd
+        self.output = output.strip()
+        super().__init__(f"{' '.join(cmd)} failed: {self.output}")
+
+
 def run(cmd):
     if shutil.which(cmd[0]) is None:
         raise RuntimeError(f"required CLI not found on PATH: {cmd[0]}")
 
-    return subprocess.check_output(cmd, text=True)
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.returncode != 0:
+        raise CommandError(cmd, result.stderr or result.stdout)
+    return result.stdout
 
 def parse(url):
     if "://" not in url:
@@ -33,10 +44,30 @@ def github(user):
         "--json","nameWithOwner,url"
     ]))
 
-def gitlab(user):
+def gitlab_user(user):
     return json.loads(run([
         "glab","repo","list","--user",user,"-F","json"
     ]))
+
+
+def gitlab_group(group):
+    return json.loads(run([
+        "glab","repo","list","--group",group,"--include-subgroups","-F","json"
+    ]))
+
+
+def gitlab(namespace):
+    try:
+        return gitlab_user(namespace)
+    except CommandError as user_error:
+        try:
+            return gitlab_group(namespace)
+        except CommandError as group_error:
+            raise RuntimeError(
+                f"GitLab namespace not found or not accessible as user or group: {namespace}. "
+                f"user lookup: {user_error.output}; group lookup: {group_error.output}"
+            ) from group_error
+
 
 def get_info(url):
     provider, user = parse(url)
