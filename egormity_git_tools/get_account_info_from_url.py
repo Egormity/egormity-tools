@@ -1,7 +1,7 @@
 import json
 import shutil
 import subprocess
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 
 class CommandError(RuntimeError):
@@ -29,12 +29,11 @@ def parse(url):
     if not parts:
         raise ValueError(f"account url has no user or organization path: {url}")
 
-    user = parts[0]
     host = p.netloc.lower()
     if "github.com" in host:
-        return "github", user
+        return "github", parts[0]
     if "gitlab.com" in host:
-        return "gitlab", user
+        return "gitlab", "/".join(parts)
     raise ValueError("unsupported")
 
 def github(user):
@@ -44,29 +43,43 @@ def github(user):
         "--json","nameWithOwner,url"
     ]))
 
+def glab_api(endpoint, paginate=False):
+    cmd = ["glab", "api", endpoint]
+    if paginate:
+        cmd.extend(["--paginate", "--output", "json"])
+    return json.loads(run(cmd))
+
+
 def gitlab_user(user):
-    return json.loads(run([
-        "glab","repo","list","--user",user,"-F","json"
-    ]))
+    users = glab_api(f"users?username={quote(user, safe='')}")
+    if not users:
+        raise RuntimeError(f"GitLab user not found or not accessible: {user}")
+
+    user_id = users[0]["id"]
+    return glab_api(f"users/{user_id}/projects?per_page=100", paginate=True)
 
 
 def gitlab_group(group):
-    return json.loads(run([
-        "glab","repo","list","--group",group,"--include-subgroups","-F","json"
-    ]))
+    group_path = quote(group, safe="")
+    return glab_api(f"groups/{group_path}/projects?include_subgroups=true&per_page=100", paginate=True)
 
 
 def gitlab(namespace):
     try:
-        return gitlab_user(namespace)
-    except CommandError as user_error:
+        return gitlab_group(namespace)
+    except CommandError as group_error:
         try:
-            return gitlab_group(namespace)
-        except CommandError as group_error:
+            return gitlab_user(namespace)
+        except (CommandError, RuntimeError) as user_error:
             raise RuntimeError(
                 f"GitLab namespace not found or not accessible as user or group: {namespace}. "
-                f"user lookup: {user_error.output}; group lookup: {group_error.output}"
-            ) from group_error
+                f"group lookup: {command_error_output(group_error)}; "
+                f"user lookup: {command_error_output(user_error)}"
+            ) from user_error
+
+
+def command_error_output(error):
+    return getattr(error, "output", str(error))
 
 
 def get_info(url):
@@ -80,7 +93,7 @@ def get_info(url):
         for r in raw:
             repos.append({
                 "name": r.get("path_with_namespace") or r.get("name"),
-                "link": r.get("web_url") or r.get("http_url_to_repo"),
+                "link": r.get("http_url_to_repo") or r.get("web_url"),
                 "provider":"gitlab"
             })
 
