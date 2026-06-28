@@ -35,6 +35,8 @@ egormity_git_tools pull_all_current_bnach <path>
 egormity_git_tools push_all_current_branch <path>
 ```
 
+For `clone_all`, the optional folder defaults to the account user or group name.
+
 Multi-account commands accept comma or semicolon separated URLs. Quote the URL list in PowerShell:
 
 ```powershell
