@@ -27,11 +27,19 @@ python -m egormity_git_tools --help
 egormity_git_tools --version
 egormity_git_tools --v
 egormity_git_tools init_clis
-egormity_git_tools get_account_info <url> [filename] [path]
-egormity_git_tools generate_agents <url> [folder] [path]
-egormity_git_tools clone_all <url> [folder] [path]
-egormity_git_tools init <url> [folder] [path]
+egormity_git_tools get_account_info <urls> [filename] [path]
+egormity_git_tools generate_agents <urls> [folder] [path]
+egormity_git_tools clone_all <urls> [folder] [path]
+egormity_git_tools init <urls> [folder] [path]
 egormity_git_tools push_all_current_branch <path>
+```
+
+Multi-account commands accept comma or semicolon separated URLs. Quote the URL list in PowerShell:
+
+```powershell
+egormity_git_tools clone_all "https://github.com/org-a,https://gitlab.com/group-b" workspace C:\Users\kotla\Desktop\egormity-dev-env
+egormity_git_tools get_account_info "https://github.com/org-a;https://gitlab.com/group-b" info.json .
+egormity_git_tools generate_agents "https://github.com/org-a,https://gitlab.com/group-b" workspace .
 ```
 
 ## Development

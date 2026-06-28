@@ -12,6 +12,7 @@
 ## CLI Conventions
 - Keep `--help`, `help`, `-h`, and no-argument output useful and up to date.
 - Keep `--version` and `--v` wired to `egormity_git_tools/version.py`.
+- Multi-account commands accept comma or semicolon separated URL lists as the first argument.
 - Prefer adding command implementations as separate modules and dispatching to them from `cli.py`.
 
 ## Current Commands
