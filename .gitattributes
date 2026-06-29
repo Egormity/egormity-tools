@@ -1,3 +1,2 @@
 *.sh text eol=lf
 bin/egormity_git_tools text eol=lf
-set_mac_paths text eol=lf
