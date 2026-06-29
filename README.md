@@ -21,6 +21,28 @@ egormity_git_tools --help
 python -m egormity_git_tools --help
 ```
 
+## Setup on macOS or Linux
+
+Run this from the repository root:
+
+```sh
+chmod +x ./set_shell_paths.sh ./bin/egormity_git_tools
+./set_shell_paths.sh
+```
+
+Then open a new terminal, or reload your shell profile:
+
+```sh
+source "<profile printed by set_shell_paths.sh>"
+```
+
+After setup, new terminals can run:
+
+```sh
+egormity_git_tools --help
+python3 -m egormity_git_tools --help
+```
+
 ## Commands
 
 ```powershell
