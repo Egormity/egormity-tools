@@ -59,7 +59,8 @@ egormity_git_tools push_all_current_branch <path>
 
 `init_clis` verifies the GitHub CLI (`gh`) and GitLab CLI (`glab`). If either
 CLI is missing, it prompts before installing it with `winget` on Windows or
-Homebrew on macOS.
+Homebrew on macOS. Account lookup commands also prompt for missing provider
+CLIs before fetching repository metadata.
 
 For `clone_all`, the optional folder defaults to the account user or group name.
 

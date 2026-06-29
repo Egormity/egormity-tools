@@ -3,6 +3,11 @@ import shutil
 import subprocess
 from urllib.parse import quote, urlparse
 
+try:
+    from .auth_git_clis import TOOLS, ensure_installed
+except ImportError:
+    from auth_git_clis import TOOLS, ensure_installed
+
 
 class CommandError(RuntimeError):
     def __init__(self, cmd, output):
@@ -12,6 +17,12 @@ class CommandError(RuntimeError):
 
 
 def run(cmd):
+    if shutil.which(cmd[0]) is None:
+        if cmd[0] in TOOLS:
+            ensure_installed(cmd[0])
+        else:
+            raise RuntimeError(f"required CLI not found on PATH: {cmd[0]}")
+
     if shutil.which(cmd[0]) is None:
         raise RuntimeError(f"required CLI not found on PATH: {cmd[0]}")
 
