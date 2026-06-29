@@ -1,3 +1,5 @@
+import getpass
+import re
 import shutil
 import subprocess
 import sys
@@ -26,6 +28,10 @@ def run(cmd):
 
 def run_interactive(cmd):
     return subprocess.run(cmd)
+
+
+def run_captured(cmd):
+    return subprocess.run(cmd, capture_output=True, text=True)
 
 
 def ensure_all():
@@ -58,7 +64,7 @@ def ensure_installed(cmd):
         )
 
     print(f"Installing {tool['name']}...")
-    result = run_interactive(installer)
+    result = install_tool(installer)
     if result.returncode != 0:
         sys.exit(f"{cmd} installation failed with exit code {result.returncode}")
 
@@ -91,6 +97,89 @@ def installer_command(tool):
         return ["brew", "install", tool["brew_package"]]
 
     return None
+
+
+def install_tool(installer):
+    if sys.platform == "darwin" and installer[:2] == ["brew", "install"]:
+        return install_with_homebrew(installer)
+    return run_interactive(installer)
+
+
+def install_with_homebrew(installer):
+    result = run_captured_printing(installer)
+    if result.returncode == 0:
+        return result
+
+    paths = homebrew_unwritable_paths(process_output(result))
+    if not paths:
+        return result
+
+    print("")
+    print("Homebrew reported non-writable directories:")
+    for path in paths:
+        print(f"- {path}")
+
+    user = getpass.getuser()
+    repair = (
+        "Run Homebrew permission repair and retry? "
+        f"This will run `sudo chown -R {user} <path>` and `chmod u+w <path>`."
+    )
+    if not prompt_yes_no(repair):
+        return result
+
+    if not repair_homebrew_permissions(paths, user):
+        return result
+
+    print("Retrying Homebrew install...")
+    return run_captured_printing(installer)
+
+
+def run_captured_printing(cmd):
+    result = run_captured(cmd)
+    print_process_output(result)
+    return result
+
+
+def print_process_output(result):
+    if result.stdout:
+        print(result.stdout, end="")
+    if result.stderr:
+        print(result.stderr, end="", file=sys.stderr)
+
+
+def process_output(result):
+    return "\n".join(part for part in (result.stdout, result.stderr) if part)
+
+
+def homebrew_unwritable_paths(output):
+    if "directories are not writable by your user" not in output:
+        return []
+
+    paths = []
+    for line in output.splitlines():
+        candidate = line.strip()
+        if is_homebrew_path(candidate):
+            paths.append(candidate)
+    return paths
+
+
+def is_homebrew_path(path):
+    return bool(re.match(r"^/(usr/local|opt/homebrew)(/[^`'\";&|<> ]+)+$", path))
+
+
+def repair_homebrew_permissions(paths, user):
+    for path in paths:
+        chown = run_interactive(["sudo", "chown", "-R", user, path])
+        if chown.returncode != 0:
+            print(f"Failed to update ownership for {path}.", file=sys.stderr)
+            return False
+
+        chmod = run_interactive(["chmod", "u+w", path])
+        if chmod.returncode != 0:
+            print(f"Failed to add user write permission for {path}.", file=sys.stderr)
+            return False
+
+    return True
 
 
 def prompt_yes_no(message):
