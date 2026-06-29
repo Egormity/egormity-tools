@@ -62,7 +62,8 @@ CLI is missing, it prompts before installing it with `winget` on Windows or
 Homebrew on macOS. Account lookup commands also prompt for missing provider
 CLIs before fetching repository metadata. If Homebrew reports non-writable
 Homebrew directories on macOS, the installer offers to repair those permissions
-and retry.
+and retry. If a provider CLI is installed but not authenticated, the command
+prompts to run the provider login flow before continuing.
 
 For `clone_all`, the optional folder defaults to the account user or group name.
 

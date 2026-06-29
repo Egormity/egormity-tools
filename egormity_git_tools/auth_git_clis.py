@@ -35,18 +35,15 @@ def run_captured(cmd):
 
 
 def ensure_all():
-    ensure_installed("gh")
-    ensure_installed("glab")
-
-    if run(["gh", "auth", "status"]).returncode != 0:
-        print("gh auth login required")
-        input()
-
-    if run(["glab", "auth", "status"]).returncode != 0:
-        print("glab auth login required")
-        input()
+    ensure_ready("gh")
+    ensure_ready("glab")
 
     print("CLI ready")
+
+
+def ensure_ready(cmd):
+    ensure_installed(cmd)
+    ensure_authenticated(cmd)
 
 
 def ensure_installed(cmd):
@@ -73,6 +70,31 @@ def ensure_installed(cmd):
             f"{cmd} installation finished, but the command is still not available. "
             "Open a new terminal or update PATH, then run init_clis again."
         )
+
+
+def ensure_authenticated(cmd):
+    status = auth_status_command(cmd)
+    if run(status).returncode == 0:
+        return
+
+    tool = TOOLS[cmd]
+    if not prompt_yes_no(f"{tool['name']} ({cmd}) is not authenticated. Log in now?"):
+        sys.exit(f"{cmd} authentication required")
+
+    result = run_interactive(auth_login_command(cmd))
+    if result.returncode != 0:
+        sys.exit(f"{cmd} auth login failed with exit code {result.returncode}")
+
+    if run(status).returncode != 0:
+        sys.exit(f"{cmd} auth login finished, but authentication still failed")
+
+
+def auth_status_command(cmd):
+    return [cmd, "auth", "status"]
+
+
+def auth_login_command(cmd):
+    return [cmd, "auth", "login"]
 
 
 def installer_command(tool):
