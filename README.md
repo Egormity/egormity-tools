@@ -57,6 +57,10 @@ egormity_git_tools pull_all_current_bnach <path>
 egormity_git_tools push_all_current_branch <path>
 ```
 
+`init_clis` verifies the GitHub CLI (`gh`) and GitLab CLI (`glab`). If either
+CLI is missing, it prompts before installing it with `winget` on Windows or
+Homebrew on macOS.
+
 For `clone_all`, the optional folder defaults to the account user or group name.
 
 Multi-account commands accept comma or semicolon separated URLs. Quote the URL list in PowerShell:
