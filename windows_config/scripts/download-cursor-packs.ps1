@@ -24,7 +24,20 @@ function Invoke-CurlDownload {
         -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" `
         -o $OutFile $Url
 
-    return ($LASTEXITCODE -eq 0 -and (Test-Path -LiteralPath $OutFile) -and (Get-Item -LiteralPath $OutFile).Length -gt 0)
+    if ($LASTEXITCODE -eq 0 -and (Test-Path -LiteralPath $OutFile) -and (Get-Item -LiteralPath $OutFile).Length -gt 0) {
+        return $true
+    }
+
+    try {
+        Invoke-WebRequest -Uri $Url -OutFile $OutFile -UseBasicParsing -TimeoutSec 180 -Headers @{
+            "User-Agent" = $userAgent
+            "Accept" = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        }
+    } catch {
+        return $false
+    }
+
+    return (Test-Path -LiteralPath $OutFile) -and (Get-Item -LiteralPath $OutFile).Length -gt 0
 }
 
 function Get-ArchiveExtensionFromHeaders {
@@ -42,16 +55,21 @@ function Get-ArchiveExtensionFromHeaders {
 foreach ($pack in $manifest.packs) {
     Write-Host "== $($pack.id) =="
 
+    if ($pack.manualDownload -and -not $pack.archiveUrl) {
+        Write-Warning "No direct archive URL configured for $($pack.id). $($pack.manualDownloadNote)"
+        continue
+    }
+
     $pagePath = Join-Path $pagesDir "$($pack.id).html"
     if (-not (Invoke-CurlDownload -Url $pack.sourceUrl -OutFile $pagePath)) {
         Write-Warning "Could not download page: $($pack.sourceUrl)"
     }
 
-    $downloadCandidates = @(
-        "https://vsthemes.org/engine/download.php?id=$($pack.pageId)",
-        "https://vsthemes.org/en/engine/download.php?id=$($pack.pageId)",
-        "https://vsthemes.org/index.php?do=download&id=$($pack.pageId)"
-    )
+    $downloadCandidates = @()
+
+    if ($pack.archiveUrl) {
+        $downloadCandidates += $pack.archiveUrl
+    }
 
     if (Test-Path -LiteralPath $pagePath) {
         $page = Get-Content $pagePath -Raw

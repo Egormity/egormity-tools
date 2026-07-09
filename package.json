@@ -7,11 +7,10 @@
     "cursor:list": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -List",
     "cursor:kami": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId kami -Apply",
     "cursor:marathon": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId marathon -Apply",
+    "cursor:marathon-bold": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId marathon-bold -Apply",
     "cursor:material-dark": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId material-design-cursors-dark -Apply",
     "cursor:menu": "windows_config\\cursor_packs\\open-cursor-menu.cmd",
     "cursor:monolith": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId monolith -Apply",
-    "cursor:pando": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId pando -Apply",
-    "cursor:windows-11": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId windows-11-cursors-concept -Apply",
     "setpath": "node scripts/setpath.js"
   }
 }

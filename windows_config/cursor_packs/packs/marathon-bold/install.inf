@@ -1,0 +1,46 @@
+[Version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+CopyFiles = Scheme.Cur
+AddReg = Scheme.Reg
+
+[DestinationDirs]
+Scheme.Cur = 25,Cursors
+
+[Scheme.Cur]
+Link.cur
+Link_32-48-64.ani
+Help_32-48-64.ani
+Move.cur
+EWResize_32-48-64.ani
+Normal.cur
+NotAllowed.cur
+Move_32-48-64.ani
+NEResize_32-48-64.ani
+NWResize_32-48-64.ani
+Text_32-48-64.ani
+NSResize_32-48-64.ani
+Precision_32-48-64.ani
+AppStarting_32-48-64.ani
+Wait_32-48-64.ani
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors","Hand",,"%25%\Cursors\Link.cur"
+HKCU,"Control Panel\Cursors","Hand",,"%25%\Cursors\Link_32-48-64.ani"
+HKCU,"Control Panel\Cursors","Help",,"%25%\Cursors\Help_32-48-64.ani"
+HKCU,"Control Panel\Cursors","SizeAll",,"%25%\Cursors\Move.cur"
+HKCU,"Control Panel\Cursors","SizeWE",,"%25%\Cursors\EWResize_32-48-64.ani"
+HKCU,"Control Panel\Cursors","Arrow",,"%25%\Cursors\Normal.cur"
+HKCU,"Control Panel\Cursors","No",,"%25%\Cursors\NotAllowed.cur"
+HKCU,"Control Panel\Cursors","SizeAll",,"%25%\Cursors\Move_32-48-64.ani"
+HKCU,"Control Panel\Cursors","SizeNESW",,"%25%\Cursors\NEResize_32-48-64.ani"
+HKCU,"Control Panel\Cursors","SizeNWSE",,"%25%\Cursors\NWResize_32-48-64.ani"
+HKCU,"Control Panel\Cursors","IBeam",,"%25%\Cursors\Text_32-48-64.ani"
+HKCU,"Control Panel\Cursors","SizeNS",,"%25%\Cursors\NSResize_32-48-64.ani"
+HKCU,"Control Panel\Cursors","Cross",,"%25%\Cursors\Precision_32-48-64.ani"
+HKCU,"Control Panel\Cursors","AppStarting",,"%25%\Cursors\AppStarting_32-48-64.ani"
+HKCU,"Control Panel\Cursors","Wait",,"%25%\Cursors\Wait_32-48-64.ani"
+; Set scheme name
+HKCU,"Control Panel\Cursors","(Default)",,"Marathon Bold"
+HKCU,"Control Panel\Cursors\Schemes","Marathon Bold",,""

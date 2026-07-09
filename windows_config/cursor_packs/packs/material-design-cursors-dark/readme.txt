@@ -1,13 +1,14 @@
-﻿=== Material Design Cursor Set ===
+﻿=== Material Design Dark Cursor Set ===
 
-By: WindowsUser (http://www.rw-designer.com/user/108879) macosbigsuraddress@gmail.com
+By: DeathkidVR (http://www.rw-designer.com/user/89397) chetraconner@outlook.com
 
-Download: http://www.rw-designer.com/cursor-set/material-design
+Download: http://www.rw-designer.com/cursor-set/material-design-dark
 
 Author's description:
 
-[ORIGINAL LINK]
-https://www.deviantart.com/jepricreations/art/Material-Design-Cursors-Dark-756850032
+The awesome Material Design cursors are back!
+
+Original Creator: https://www.deviantart.com/rosea92
 
 ==========
 

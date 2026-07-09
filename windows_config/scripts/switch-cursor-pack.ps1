@@ -32,13 +32,27 @@ function Get-Pack {
 function Expand-PackArchive {
     param([string] $Id)
 
-    $archive = Get-ChildItem -LiteralPath $archivesDir -File -ErrorAction SilentlyContinue |
-        Where-Object { $_.BaseName -like "*$Id*" -and $_.Extension -in ".zip", ".rar", ".7z" } |
+    $archives = @(Get-ChildItem -LiteralPath $archivesDir -File -ErrorAction SilentlyContinue |
+        Where-Object { $_.Extension -in ".zip", ".rar", ".7z" })
+
+    $archive = $archives |
+        Where-Object { $_.BaseName -eq $Id } |
         Sort-Object Length -Descending |
         Select-Object -First 1
 
     if (-not $archive) {
+        $archive = $archives |
+            Where-Object { $_.BaseName -like "*$Id*" } |
+            Sort-Object Length -Descending |
+            Select-Object -First 1
+    }
+
+    if (-not $archive) {
         throw "No archive found for $Id in $archivesDir."
+    }
+
+    if ($archive.Length -lt 1024) {
+        throw "Archive for $Id is too small and may be incomplete: $($archive.FullName)"
     }
 
     $destination = Join-Path $packsDir $Id
@@ -60,6 +74,27 @@ function Expand-PackArchive {
     }
 
     Write-Host "Extracted $($archive.Name) to $destination"
+}
+
+function Get-PackArchive {
+    param([string] $Id)
+
+    $archives = @(Get-ChildItem -LiteralPath $archivesDir -File -ErrorAction SilentlyContinue |
+        Where-Object { $_.Extension -in ".zip", ".rar", ".7z" })
+
+    $archive = $archives |
+        Where-Object { $_.BaseName -eq $Id } |
+        Sort-Object Length -Descending |
+        Select-Object -First 1
+
+    if (-not $archive) {
+        $archive = $archives |
+            Where-Object { $_.BaseName -like "*$Id*" } |
+            Sort-Object Length -Descending |
+            Select-Object -First 1
+    }
+
+    return $archive
 }
 
 function Install-PackInf {
@@ -175,7 +210,7 @@ if ($List -or -not $PackId) {
     $manifest.packs | ForEach-Object {
         $packIdForArchiveLookup = $_.id
         $packDir = Join-Path $packsDir $_.id
-        $archive = Get-ChildItem -LiteralPath $archivesDir -File -ErrorAction SilentlyContinue | Where-Object { $_.BaseName -like "*$packIdForArchiveLookup*" } | Select-Object -First 1
+        $archive = Get-PackArchive -Id $packIdForArchiveLookup
         [pscustomobject]@{
             Id = $_.id
             Name = $_.name

@@ -35,12 +35,13 @@ Currently downloaded and registered:
 
 - Anathema Pink
 - Crystal Clear v4.1
+- Kami V2 - Paper White
+- Marathon
+- Marathon Bold
 - Material Design Cursors Dark
 - Monolith
 
-Still waiting on the original VSThemes source or a mirror:
+Manual sources saved, but not listed as switchable until an archive is downloaded:
 
-- Kami
 - Windows 11 Cursors Concept
-- Marathon
 - PandO
