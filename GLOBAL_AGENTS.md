@@ -36,4 +36,5 @@
 - You must keep final history as clean logical commits, not one huge commit or noisy micro-commits.
 - Every branch except `master` and `develop` must use `<type>/codex/<name>/<yyyy-mm-dd>`, for example `feature/codex/my-task/2026-07-05`.
 - Direct pushes to `master / main` and `develop` are not allowed.
-- When merging branch into `develop`, squash commits and do not delete source branch.
+- If a remote repository is configured, create a PR | PL for branch integration instead of merging locally. If no remote repository is configured, merge locally.
+- When accepting PR | PL / merging branch into `develop`, squash commits and do not delete source branch.
