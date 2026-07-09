@@ -1,0 +1,45 @@
+﻿[Arrow]
+Path=Material Design Normal.cur
+
+[Help]
+Path=Material Design Help.cur
+
+[AppStarting]
+Path=Material Design Working.ani
+
+[Wait]
+Path=Material Design Busy.ani
+
+[Crosshair]
+Path=Material Design Precision.cur
+
+[NWPen]
+Path=Material Design Handwriting.cur
+
+[No]
+Path=Material Design Unavailable.cur
+
+[SizeNS]
+Path=Material Design Vertical.cur
+
+[SizeWE]
+Path=Material Design Horizontal.cur
+
+[SizeNWSE]
+Path=Material Design Diagonal 1.cur
+
+[SizeAll]
+Path=Material Design Move.cur
+
+[UpArrow]
+Path=Material Design Alternate.cur
+
+[Hand]
+Path=Material Design Link.cur
+
+[Pin]
+Path=Material Design Location.cur
+
+[Person]
+Path=Material Design Person.cur
+

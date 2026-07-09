@@ -18,6 +18,7 @@ After setup, new terminals can run:
 
 ```powershell
 egormity_git_tools --help
+egormity_cursors --help
 python -m egormity_git_tools --help
 ```
 
@@ -54,6 +55,19 @@ egormity_git_tools clone_all <urls> [folder] [path]
 egormity_git_tools init <urls> [folder] [path]
 egormity_git_tools pull_all_current_bnach <path>
 egormity_git_tools push_all_current_branch <path>
+```
+
+Cursor commands on Windows:
+
+```powershell
+egormity_cursors
+egormity_cursors list
+egormity_cursors apply <pack-id>
+egormity_cursors register <pack-id>
+egormity_cursors install <pack-id>
+egormity_cursors extract <pack-id>
+egormity_cursors source <pack-id>
+egormity_cursors download
 ```
 
 `init_clis` verifies the GitHub CLI (`gh`) and GitLab CLI (`glab`). If either

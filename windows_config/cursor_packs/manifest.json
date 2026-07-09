@@ -1,0 +1,56 @@
+{
+  "packs": [
+    {
+      "id": "kami",
+      "name": "Kami",
+      "sourceUrl": "https://vsthemes.org/en/cursors/white/14936-kami.html",
+      "pageId": 14936
+    },
+    {
+      "id": "windows-11-cursors-concept",
+      "name": "Windows 11 Cursors Concept",
+      "sourceUrl": "https://vsthemes.org/en/cursors/black/36701-windows-11-cursors-concept.html",
+      "pageId": 36701
+    },
+    {
+      "id": "marathon",
+      "name": "Marathon",
+      "sourceUrl": "https://vsthemes.org/en/cursors/white/74844-marathon.html",
+      "pageId": 74844
+    },
+    {
+      "id": "pando",
+      "name": "PandO",
+      "sourceUrl": "https://vsthemes.org/en/cursors/colored/70417-pando.html",
+      "pageId": 70417
+    },
+    {
+      "id": "crystal-clear-v41",
+      "name": "Crystal Clear v4.1",
+      "sourceUrl": "https://vsthemes.org/en/cursors/black/984-crystal-clear-v41.html",
+      "pageId": 984,
+      "downloadedFrom": "https://www.rw-designer.com/cursor-set/crystal-clear-v4-1-transparent"
+    },
+    {
+      "id": "anathema-pink",
+      "name": "Anathema Pink",
+      "sourceUrl": "https://vsthemes.org/en/cursors/colored/3081-anathema-pink.html",
+      "pageId": 3081,
+      "downloadedFrom": "https://www.rw-designer.com/cursor-set/anathema-pink"
+    },
+    {
+      "id": "material-design-cursors-dark",
+      "name": "Material Design Cursors Dark",
+      "sourceUrl": "https://vsthemes.org/en/cursors/static/3084-material-design-cursors-dark.html",
+      "pageId": 3084,
+      "downloadedFrom": "https://www.rw-designer.com/cursor-set/material-design"
+    },
+    {
+      "id": "monolith",
+      "name": "Monolith",
+      "sourceUrl": "https://vsthemes.org/en/cursors/black/70650-monolith.html",
+      "pageId": 70650,
+      "downloadedFrom": "https://www.rw-designer.com/cursor-set/monolith-dark"
+    }
+  ]
+}

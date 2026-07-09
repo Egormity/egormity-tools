@@ -66,10 +66,11 @@ $env:PATH = Add-UniquePathValue -CurrentValue $env:PATH -ValuesToAdd $commandPat
 $env:PYTHONPATH = Remove-PathValue -CurrentValue $env:PYTHONPATH -ValuesToRemove $obsoletePaths
 $env:PYTHONPATH = Add-UniquePathValue -CurrentValue $env:PYTHONPATH -ValuesToAdd $pythonPaths
 
-Write-Host "egormity_git_tools path configured:"
+Write-Host "egormity tools path configured:"
 Write-Host "  PATH: $binPath"
 Write-Host "  PYTHONPATH: $repoRoot"
 Write-Host ""
 Write-Host "Current terminal is ready. New terminals can run:"
 Write-Host "  egormity_git_tools"
+Write-Host "  egormity_cursors"
 Write-Host "  python -m egormity_git_tools"

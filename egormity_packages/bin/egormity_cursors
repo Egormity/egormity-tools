@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+echo "egormity_cursors is a Windows cursor helper. Run it from Windows PowerShell or Command Prompt."
+exit 1
