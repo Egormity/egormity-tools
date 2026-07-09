@@ -10,7 +10,6 @@ This folder stores reinstall-ready Windows configuration exports and Jarvis UI a
 - `utilities/`: AppGroup, Windhawk and Winaero Tweaker config/data exports.
 - `scripts/`: restore notes and helper scripts.
 - `jarvis_sounds/wav/`: active Windows sound scheme files.
-- `jarvis_sounds/mp3/`: original Jarvis source audio from the Desktop Jarvis folder.
 - `cursors/`: active cursor files.
 
 ## Restore Jarvis sounds
