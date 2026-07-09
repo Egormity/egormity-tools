@@ -22,16 +22,6 @@ powershell -ExecutionPolicy Bypass -File .\scripts\set-jarvis-sounds.ps1
 
 The script points current Windows sound events at `jarvis_sounds/wav` inside this repository.
 
-## Restore Segoe Print UI font
-
-Run from an elevated PowerShell:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\apply-segoe-print-fonts.ps1
-```
-
-The script applies Segoe Print to classic Windows UI font slots and maps broad font substitutions to Segoe Print where Windows allows it. When run without admin rights it applies the current-user layer only; run elevated to update machine-wide aliases such as `MS Shell Dlg`, `Tahoma`, `Microsoft Sans Serif`, `Arial`, and `Segoe UI`.
-
 ## Restore terminal fonts
 
 Run from PowerShell:
