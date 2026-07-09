@@ -1,0 +1,4 @@
+2026-06-28 11:32:58.562 [info] update#ctor - updates are disabled by user preference
+2026-06-28 11:32:59.846 [info] Starting extension host with pid 13132 (fork() took 15 ms).
+2026-06-28 11:33:21.597 [info] Waiting for extension host with pid 13132 to exit.
+2026-06-28 11:33:21.611 [info] Extension host with pid 13132 exited with code: 0, signal: null.

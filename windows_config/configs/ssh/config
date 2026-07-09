@@ -1,0 +1,5 @@
+Host mac-mini
+    HostName 100.73.127.71
+    User ruyou
+    IdentityFile ~/.ssh/id_ed25519_codex_mac
+    IdentitiesOnly yes

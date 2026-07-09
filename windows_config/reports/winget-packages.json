@@ -1,0 +1,272 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2026-07-03T22:48:11.752-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop",
+					"Version" : "4.72.0"
+				},
+				{
+					"PackageIdentifier" : "Git.Git",
+					"Version" : "2.52.0"
+				},
+				{
+					"PackageIdentifier" : "PostgreSQL.PostgreSQL.17",
+					"Version" : "17.10-1"
+				},
+				{
+					"PackageIdentifier" : "vim.vim",
+					"Version" : "9.2.0653"
+				},
+				{
+					"PackageIdentifier" : "RARLab.WinRAR",
+					"Version" : "7.13.0"
+				},
+				{
+					"PackageIdentifier" : "winaero.tweaker",
+					"Version" : "1.65.0.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64",
+					"Version" : "10.0.40219"
+				},
+				{
+					"PackageIdentifier" : "Happ.Happ",
+					"Version" : "> 2.6.0"
+				},
+				{
+					"PackageIdentifier" : "Logitech.GHUB",
+					"Version" : "2026.3.880543"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64",
+					"Version" : "9.0.30729.7523"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VSTOR",
+					"Version" : "10.0.60922"
+				},
+				{
+					"PackageIdentifier" : "Logitech.OptionsPlus",
+					"Version" : "2.4.903778"
+				},
+				{
+					"PackageIdentifier" : "GitHub.cli",
+					"Version" : "2.95.0"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.PhysX",
+					"Version" : "9.23.1019"
+				},
+				{
+					"PackageIdentifier" : "valinet.ExplorerPatcher",
+					"Version" : "26100.4946.69.6"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.BuildTools",
+					"Version" : "18.7.2"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome.EXE",
+					"Version" : "149.0.7827.201"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge",
+					"Version" : "149.0.4022.98"
+				},
+				{
+					"PackageIdentifier" : "Guru3D.RTSS",
+					"Version" : "7.3.7"
+				},
+				{
+					"PackageIdentifier" : "Valve.Steam",
+					"Version" : "2.10.91.91"
+				},
+				{
+					"PackageIdentifier" : "RamenSoftware.Windhawk",
+					"Version" : "1.7.3"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
+					"Version" : "12.0.30501.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.10",
+					"Version" : "10.0.9"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64",
+					"Version" : "14.51.36247.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6",
+					"Version" : "6.0.5"
+				},
+				{
+					"PackageIdentifier" : "Tailscale.Tailscale",
+					"Version" : "1.98.4"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86",
+					"Version" : "11.0.61030.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86",
+					"Version" : "8.0.61187"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86",
+					"Version" : "9.0.30729.7523"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86",
+					"Version" : "14.51.36247.0"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher",
+					"Version" : "> 3.13.5"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.10",
+					"Version" : "10.0.301"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86",
+					"Version" : "10.0.40219"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64",
+					"Version" : "11.0.61030.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.8",
+					"Version" : "8.0.26"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86",
+					"Version" : "12.0.30501.0"
+				},
+				{
+					"PackageIdentifier" : "Yandex.Music",
+					"Version" : "5.108.3"
+				},
+				{
+					"PackageIdentifier" : "BurntSushi.ripgrep.MSVC",
+					"Version" : "15.1.0"
+				},
+				{
+					"PackageIdentifier" : "FiloSottile.mkcert",
+					"Version" : "1.4.4"
+				},
+				{
+					"PackageIdentifier" : "Google.PlatformTools",
+					"Version" : "37.0.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.NuGet",
+					"Version" : "7.6.0.59"
+				},
+				{
+					"PackageIdentifier" : "Schniz.fnm",
+					"Version" : "1.39.0"
+				},
+				{
+					"PackageIdentifier" : "Yandex.Disk",
+					"Version" : "3.2.48.5157"
+				},
+				{
+					"PackageIdentifier" : "Obsidian.Obsidian",
+					"Version" : "1.10.6"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.14",
+					"Version" : "3.14.4"
+				},
+				{
+					"PackageIdentifier" : "Telegram.TelegramDesktop",
+					"Version" : "6.9.3"
+				},
+				{
+					"PackageIdentifier" : "GLab.GLab",
+					"Version" : "1.105.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode",
+					"Version" : "1.127.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams",
+					"Version" : "25122.1415.3698.6812"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.AppInstaller",
+					"Version" : "1.29.280.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.Native.Runtime",
+					"Version" : "2.2.28604.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.5",
+					"Version" : "2.52012.2002.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7",
+					"Version" : "7.2409.9001.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8",
+					"Version" : "8.2511.26001.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14",
+					"Version" : "14.0.33728.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCLibs.14",
+					"Version" : "14.0.33519.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.5",
+					"Version" : "1.5.9"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.6",
+					"Version" : "1.6.9"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.7",
+					"Version" : "1.7.9"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.8",
+					"Version" : "1.8.9"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.2.1",
+					"Version" : "2.2.0.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal",
+					"Version" : "1.24.11321.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WSL",
+					"Version" : "2.6.3.0"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.29.280"
+}

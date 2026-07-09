@@ -11,7 +11,7 @@ Local command-line tools for managing Egormity development workflows.
 Run this from the repository root:
 
 ```powershell
-.\set_windows_paths.ps1
+npm run setpath
 ```
 
 After setup, new terminals can run:
@@ -26,14 +26,13 @@ python -m egormity_git_tools --help
 Run this from the repository root:
 
 ```sh
-chmod +x ./set_mac_paths.sh ./bin/egormity_git_tools
-./set_mac_paths.sh
+npm run setpath
 ```
 
 Then open a new terminal, or reload your shell profile:
 
 ```sh
-source "<profile printed by set_mac_paths.sh>"
+source "<profile printed by egormity_packages/set_mac_paths.sh>"
 ```
 
 After setup, new terminals can run:
@@ -82,7 +81,7 @@ Run basic verification after Python changes:
 ```powershell
 python -m egormity_git_tools --help
 python -m egormity_git_tools --version
-python -m compileall egormity_git_tools
+python -m compileall egormity_packages\egormity_git_tools
 ```
 
 Remove generated `__pycache__` directories before committing.

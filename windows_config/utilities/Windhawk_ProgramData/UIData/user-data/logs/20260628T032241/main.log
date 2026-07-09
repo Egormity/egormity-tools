@@ -1,0 +1,4 @@
+2026-06-28 03:22:42.432 [info] update#ctor - updates are disabled by user preference
+2026-06-28 03:22:43.896 [info] Starting extension host with pid 4840 (fork() took 21 ms).
+2026-06-28 03:22:45.413 [info] Waiting for extension host with pid 4840 to exit.
+2026-06-28 03:22:45.515 [info] Extension host with pid 4840 exited with code: 0, signal: null.

@@ -1,0 +1,160 @@
+﻿=== npm global ===
+C:\Users\kotla\AppData\Roaming\npm
++-- @expo/ngrok@4.1.0
++-- playwright@1.58.2
++-- pnpm@10.28.0
++-- prettier@3.8.0
+`-- yarn@1.22.22
+
+=== pnpm global ===
+pnpm : [ERROR] The configured global bin directory "C:\Users\kotla\AppData\Local\pnpm\bin" is not in PATH
+At C:\Users\kotla\Documents\Codex\2026-07-03\new-chat\work\collect-windows-reinstall-inventory.ps1:152 char:34
++     "=== pnpm global ==="; try { pnpm list -g --depth=0 } catch {}
++                                  ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([ERROR] The con... is not in PATH:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Run "pnpm setup" to update your shell configuration.
+=== yarn global ===
+yarn global v1.22.22
+Done in 0.07s.
+=== pip list ===
+Package      Version
+------------ ---------
+bcrypt       5.0.0
+cffi         2.0.0
+cryptography 49.0.0
+ExifRead     3.5.1
+imagecodecs  2026.3.6
+invoke       3.0.3
+numpy        2.4.4
+paramiko     5.0.0
+pillow       12.2.0
+pip          26.0.1
+pycparser    3.0
+PyNaCl       1.6.2
+rawpy        0.26.1
+tifffile     2026.4.11
+=== py pip list ===
+Package      Version
+------------ ---------
+bcrypt       5.0.0
+cffi         2.0.0
+cryptography 49.0.0
+ExifRead     3.5.1
+imagecodecs  2026.3.6
+invoke       3.0.3
+numpy        2.4.4
+paramiko     5.0.0
+pillow       12.2.0
+pip          26.0.1
+pycparser    3.0
+PyNaCl       1.6.2
+rawpy        0.26.1
+tifffile     2026.4.11
+=== dotnet tools ===
+Package Id      Version      Commands
+-------------------------------------
+=== cargo installed ===
+=== gem list ===
+=== go env GOPATH ===
+=== PowerShell modules ===
+
+Name                                      Version      Path                                                                                                                                     
+----                                      -------      ----                                                                                                                                     
+AppBackgroundTask                         1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\AppBackgroundTask\AppBackgroundTask.psd1                                              
+AppLocker                                 2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\AppLocker\AppLocker.psd1                                                              
+AppvClient                                1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\AppvClient\AppvClient.psd1                                                            
+Appx                                      2.0.1.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Appx\Appx.psd1                                                                        
+AssignedAccess                            1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\AssignedAccess\AssignedAccess.psd1                                                    
+BitLocker                                 1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\BitLocker\BitLocker.psd1                                                              
+BitsTransfer                              2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\BitsTransfer\BitsTransfer.psd1                                                        
+BranchCache                               1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\BranchCache\BranchCache.psd1                                                          
+CimCmdlets                                1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\CimCmdlets\CimCmdlets.psd1                                                            
+ConfigCI                                  1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ConfigCI\ConfigCI.psd1                                                                
+ConfigDefender                            1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ConfigDefender\ConfigDefender.psd1                                                    
+ConfigDefenderPerformance                 1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ConfigDefenderPerformance\ConfigDefenderPerformance.psd1                              
+Defender                                  1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Defender\Defender.psd1                                                                
+DefenderPerformance                       1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\DefenderPerformance\DefenderPerformance.psd1                                          
+DeliveryOptimization                      1.0.3.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\DeliveryOptimization\DeliveryOptimization.psd1                                        
+DirectAccessClientComponents              1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\DirectAccessClientComponents\DirectAccessClientComponents.psd1                        
+Dism                                      3.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Dism\Dism.psd1                                                                        
+DnsClient                                 1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\DnsClient\DnsClient.psd1                                                              
+EventTracingManagement                    1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\EventTracingManagement\EventTracingManagement.psd1                                    
+Get-NetView                               2023.2.7.226 C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Get-NetView\Get-NetView.psd1                                                          
+HgsClient                                 1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\HgsClient\HgsClient.psd1                                                              
+HgsDiagnostics                            1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\HgsDiagnostics\HgsDiagnostics.psd1                                                    
+HostNetworkingService                     1.0.0.1      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\HostNetworkingService\HostNetworkingService.psd1                                      
+Hyper-V                                   2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Hyper-V\2.0.0.0\Hyper-V.psd1                                                          
+International                             2.1.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\International\International.psd1                                                      
+iSCSI                                     1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\iSCSI\iSCSI.psd1                                                                      
+ISE                                       1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ISE\ISE.psd1                                                                          
+Kds                                       1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Kds\Kds.psd1                                                                          
+LanguagePackManagement                    1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\LanguagePackManagement\LanguagePackManagement.psd1                                    
+LAPS                                      1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\LAPS\LAPS.psd1                                                                        
+Microsoft.PowerShell.Archive              1.0.1.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Archive\Microsoft.PowerShell.Archive.psd1                        
+Microsoft.PowerShell.Diagnostics          3.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Diagnostics\Microsoft.PowerShell.Diagnostics.psd1                
+Microsoft.PowerShell.Host                 3.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1                              
+Microsoft.PowerShell.LocalAccounts        1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.LocalAccounts\1.0.0.0\Microsoft.PowerShell.LocalAccounts.psd1    
+Microsoft.PowerShell.Management           3.1.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1                  
+Microsoft.PowerShell.ODataUtils           1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.ODataUtils\Microsoft.PowerShell.ODataUtils.psd1                  
+Microsoft.PowerShell.Operation.Validation 1.0.1        C:\Program Files\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.1\Microsoft.PowerShell.Operation.Validation.psd1
+Microsoft.PowerShell.Security             3.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1                      
+Microsoft.PowerShell.Utility              3.1.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1                        
+Microsoft.ReFsDedup.Commands              2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.ReFsDedup.Commands\Microsoft.ReFsDedup.Commands.psd1                        
+Microsoft.Windows.Bcd.Cmdlets             1.0.0        C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.Windows.Bcd.Cmdlets\Microsoft.Windows.Bcd.Cmdlets.psd1                      
+Microsoft.WSMan.Management                3.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1                            
+MMAgent                                   1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\MMAgent\MMAgent.psd1                                                                  
+MsDtc                                     1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\MsDtc\MsDtc.psd1                                                                      
+NetAdapter                                2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetAdapter\NetAdapter.psd1                                                            
+NetConnection                             2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetConnection\NetConnection.psd1                                                      
+NetEventPacketCapture                     1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetEventPacketCapture\NetEventPacketCapture.psd1                                      
+NetLbfo                                   2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetLbfo\NetLbfo.psd1                                                                  
+NetNat                                    1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetNat\NetNat.psd1                                                                    
+NetQos                                    2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetQos\NetQos.psd1                                                                    
+NetSecurity                               2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetSecurity\NetSecurity.psd1                                                          
+NetSwitchTeam                             1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetSwitchTeam\NetSwitchTeam.psd1                                                      
+NetTCPIP                                  1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetTCPIP\NetTCPIP.psd1                                                                
+NetworkConnectivityStatus                 1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetworkConnectivityStatus\NetworkConnectivityStatus.psd1                              
+NetworkSwitchManager                      1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetworkSwitchManager\NetworkSwitchManager.psd1                                        
+NetworkTransition                         1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\NetworkTransition\NetworkTransition.psd1                                              
+OsConfiguration                           1.2.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\OsConfiguration\OsConfiguration.psd1                                                  
+PackageManagement                         1.0.0.1      C:\Program Files\WindowsPowerShell\Modules\PackageManagement\1.0.0.1\PackageManagement.psd1                                              
+PcsvDevice                                1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PcsvDevice\PcsvDevice.psd1                                                            
+PersistentMemory                          1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PersistentMemory\PersistentMemory.psd1                                                
+Pester                                    3.4.0        C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0\Pester.psd1                                                                      
+PKI                                       1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PKI\PKI.psd1                                                                          
+PnpDevice                                 1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PnpDevice\PnpDevice.psd1                                                              
+PowerShellGet                             1.0.0.1      C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1                                                      
+PrintManagement                           1.1          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PrintManagement\PrintManagement.psd1                                                  
+ProcessMitigations                        1.0.12       C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ProcessMitigations\ProcessMitigations.psd1                                            
+Provisioning                              3.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Provisioning\Provisioning.psd1                                                        
+PSDesiredStateConfiguration               1.1          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguration\PSDesiredStateConfiguration.psd1                          
+PSDiagnostics                             1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDiagnostics\PSDiagnostics.psd1                                                      
+PSReadLine                                2.0.0        C:\Program Files\WindowsPowerShell\Modules\PSReadLine\2.0.0\PSReadLine.psd1                                                              
+PSScheduledJob                            1.1.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSScheduledJob\PSScheduledJob.psd1                                                    
+PSWorkflow                                2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSWorkflow\PSWorkflow.psd1                                                            
+PSWorkflowUtility                         1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSWorkflowUtility\PSWorkflowUtility.psd1                                              
+ScheduledTasks                            1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ScheduledTasks\ScheduledTasks.psd1                                                    
+SecureBoot                                2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\SecureBoot\SecureBoot.psd1                                                            
+SmbShare                                  2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\SmbShare\SmbShare.psd1                                                                
+SmbWitness                                2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\SmbWitness\SmbWitness.psd1                                                            
+StartLayout                               1.0.0.1      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\StartLayout\StartLayout.psd1                                                          
+Storage                                   2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Storage\Storage.psd1                                                                  
+StorageBusCache                           1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\StorageBusCache\StorageBusCache.psd1                                                  
+TLS                                       2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\TLS\TLS.psd1                                                                          
+TroubleshootingPack                       1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\TroubleshootingPack\TroubleshootingPack.psd1                                          
+TrustedPlatformModule                     2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\TrustedPlatformModule\TrustedPlatformModule.psd1                                      
+UEV                                       2.1.639.0    C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\UEV\UEV.psd1                                                                          
+VMDirectStorage                           1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\VMDirectStorage\VMDirectStorage.psd1                                                  
+VpnClient                                 2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\VpnClient\VpnClient.psd1                                                              
+Wdac                                      1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Wdac\Wdac.psd1                                                                        
+Whea                                      2.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Whea\Whea.psd1                                                                        
+WindowsDeveloperLicense                   1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\WindowsDeveloperLicense\WindowsDeveloperLicense.psd1                                  
+WindowsErrorReporting                     1.0          C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\WindowsErrorReporting\WindowsErrorReporting.psd1                                      
+WindowsSearch                             1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\WindowsSearch\WindowsSearch.psd1                                                      
+WindowsUpdate                             1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\WindowsUpdate\WindowsUpdate.psd1                                                      
+WinHttpProxy                              1.0.0.0      C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\WinHttpProxy\WinHttpProxy.psd1                                                        
+
+
+

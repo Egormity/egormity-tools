@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "setpath": "node scripts/setpath.js"
+  }
+}

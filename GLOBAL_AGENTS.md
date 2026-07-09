@@ -1,5 +1,7 @@
 # Global Codex Rules
 
+## You must answer the user in the main language of the prompt. You must write all the code in English.
+
 ## Working environment
 - Primary machine is Windows 11.
 - Projects are under `Desktop/egormity-dev-env` on both Windows and mac-mini.
@@ -26,7 +28,12 @@
 - During normal development, do not prioritize backward compatibility with old local/dev data. Always prioritize new schemas and style - only if there are no production data with old styles.
 - Backward-compatible migrations are required only when explicitly working with production data.
 
+## Branch Workflow
+- Before starting work on a new feature, you must ask the user whether to continue in the current branch or switch to a new one.
+
 ## Commit Hygiene
 - You must commit proactively at meaningful working checkpoints.
 - You must squash repeated small commits for the same feature, including one-line fixes, follow-up tweaks, and corrections.
-- Keep final history as clean logical commits, not one huge commit or noisy micro-commits.
+- You must increase the version with the commits and include the new version in the commit message, If the app uses versioning.
+- You must keep final history as clean logical commits, not one huge commit or noisy micro-commits.
+- Every branch except `master` and `develop` you must use the `prefix/codex/name/yyyy-mm-dd`.

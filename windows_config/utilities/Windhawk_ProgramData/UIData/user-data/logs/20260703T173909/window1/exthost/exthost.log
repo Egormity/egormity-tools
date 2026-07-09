@@ -1,0 +1,10 @@
+2026-07-03 17:39:14.815 [info] Extension host with pid 11908 started
+2026-07-03 17:39:14.816 [info] Skipping acquiring lock for c:\ProgramData\Windhawk\UIData\user-data\User\workspaceStorage\9fa99b204779cd0b6ad3c229f42a718e.
+2026-07-03 17:39:14.840 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-07-03 17:39:14.841 [info] ExtensionService#_doActivateExtension m417z.windhawk, startup: true, activationEvent: '*'
+2026-07-03 17:39:15.463 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-07-03 17:39:15.631 [info] Eager extensions activated
+2026-07-03 17:39:15.691 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-03 17:39:15.691 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2026-07-03 18:27:44.898 [info] Extension host terminating: received terminate message from renderer
+2026-07-03 18:27:44.902 [info] Extension host with pid 11908 exiting with code 0

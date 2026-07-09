@@ -1,0 +1,6 @@
+2026-06-30 21:44:09.156 [info] Extension host with pid 27624 started
+2026-06-30 21:44:09.156 [info] Skipping acquiring lock for c:\ProgramData\Windhawk\UIData\user-data\User\workspaceStorage\9fa99b204779cd0b6ad3c229f42a718e.
+2026-06-30 21:44:09.176 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-06-30 21:44:09.176 [info] ExtensionService#_doActivateExtension m417z.windhawk, startup: true, activationEvent: '*'
+2026-06-30 21:44:09.538 [info] Extension host terminating: renderer closed the socket
+2026-06-30 21:44:09.538 [info] Extension host with pid 27624 exiting with code 0

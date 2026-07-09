@@ -1,0 +1,11 @@
+{
+  "ShowSystemTrayIcon": true,
+  "RunAtStartup": true,
+  "UseGrayscaleIcon": false,
+  "CheckForUpdatesOnStartup": true,
+  "EnableWindowSlideAnimation": true,
+  "EnableContentSlideAnimation": true,
+  "AppTheme": "System",
+  "PopupTheme": "WindowsMode",
+  "PopupAccentBackground": true
+}

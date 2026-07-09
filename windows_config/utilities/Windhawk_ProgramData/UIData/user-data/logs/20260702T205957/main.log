@@ -1,0 +1,4 @@
+2026-07-02 20:59:57.701 [info] update#ctor - updates are disabled by user preference
+2026-07-02 20:59:59.297 [info] Starting extension host with pid 22744 (fork() took 11 ms).
+2026-07-02 21:00:02.219 [info] Waiting for extension host with pid 22744 to exit.
+2026-07-02 21:00:02.230 [info] Extension host with pid 22744 exited with code: 0, signal: null.

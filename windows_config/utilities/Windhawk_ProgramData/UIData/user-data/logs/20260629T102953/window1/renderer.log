@@ -1,0 +1,2 @@
+2026-06-29 10:29:58.557 [info] [perf] Render performance baseline is 23ms
+2026-06-29 10:30:05.725 [error] Error while registering log channel file:///c%3A/ProgramData/Windhawk/UIData/user-data/logs/20260629T102953/userDataSync.log Timed out while waiting for file to be created
