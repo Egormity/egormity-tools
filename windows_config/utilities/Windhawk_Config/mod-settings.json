@@ -1,0 +1,197 @@
+﻿[
+    {
+        "id":  "explorer-details-better-file-sizes",
+        "disabled":  false,
+        "libraryFileName":  "explorer-details-better-file-sizes_1.5.1_790807.dll",
+        "include":  "*",
+        "exclude":  "conhost.exe|Plex*.exe|backgroundTaskHost.exe|LockApp.exe|SearchHost.exe|ShellExperienceHost.exe|StartMenuExperienceHost.exe|msedgewebview2.exe|windhawk.exe|*\\UI\\VSCodium.exe",
+        "architecture":  "",
+        "version":  "1.5.1",
+        "settingsChangeTime":  1783150269,
+        "settings":  {
+                         "useIecTerms":  0,
+                         "calculateFolderSizes":  "disabled",
+                         "disableKbOnlySizes":  1,
+                         "sortSizesMixFolders":  1
+                     }
+    },
+    {
+        "id":  "file-explorer-content-animation",
+        "disabled":  false,
+        "libraryFileName":  "file-explorer-content-animation_1.0.1_473086.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.0.1",
+        "settingsChangeTime":  1783154055,
+        "settings":  {
+                         "reverseDirection":  0,
+                         "fade":  1,
+                         "navigationDelay":  140,
+                         "pageTransitions":  1,
+                         "distance":  32,
+                         "propertyPages.tabTransitions":  1,
+                         "firstOpenDelay":  500,
+                         "animateNavPane":  0,
+                         "duration":  420,
+                         "propertyPages.animate":  1
+                     }
+    },
+    {
+        "id":  "taskbar-autohide-instant-show",
+        "disabled":  false,
+        "libraryFileName":  "taskbar-autohide-instant-show_2.2_673827.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "2.2",
+        "settingsChangeTime":  1783164531,
+        "settings":  {
+                         "hideDelay":  1,
+                         "frameRate":  60,
+                         "edgeDetection":  0,
+                         "showDuration":  200,
+                         "showSpeedup":  400,
+                         "oldTaskbarOnWin11":  0,
+                         "hideDuration":  200,
+                         "hideSpeedup":  400,
+                         "unhideDelay":  1,
+                         "animationType":  "slideFade"
+                     }
+    },
+    {
+        "id":  "taskbar-auto-hide-per-monitor",
+        "disabled":  false,
+        "libraryFileName":  "taskbar-auto-hide-per-monitor_1.0.3_704002.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.0.3",
+        "settingsChangeTime":  0,
+        "settings":  {
+
+                     }
+    },
+    {
+        "id":  "taskbar-dock-animation",
+        "disabled":  false,
+        "libraryFileName":  "taskbar-dock-animation_1.9.2_432844.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.9.2",
+        "settingsChangeTime":  1783155890,
+        "settings":  {
+                         "AnimationType":  0,
+                         "DisableBounce":  0,
+                         "LerpSpeed":  60,
+                         "DisableVerticalBounce":  0,
+                         "MirrorForTopTaskbar":  0,
+                         "ExcludeSystemButtonsMode":  0,
+                         "MaxScale":  130,
+                         "EffectRadius":  100,
+                         "TaskbarLabelsMode":  0,
+                         "FocusDuration":  150,
+                         "SpacingFactor":  50,
+                         "BounceDelay":  500
+                     }
+    },
+    {
+        "id":  "taskbar-grouping",
+        "disabled":  false,
+        "libraryFileName":  "taskbar-grouping_1.3.10_155120.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.3.10",
+        "settingsChangeTime":  1783150370,
+        "settings":  {
+                         "customGroups[0].items[0]":  "group1-program1.exe",
+                         "useWindowIcons":  0,
+                         "oldTaskbarOnWin11":  0,
+                         "pinnedItemsMode":  "replace",
+                         "customGroups[0].items[1]":  "group1-program2.exe",
+                         "groupingMode":  "regular",
+                         "customGroups[0].name":  "Group 1",
+                         "excludedPrograms[0]":  "excluded1.exe",
+                         "placeUngroupedItemsTogether":  "0"
+                     }
+    },
+    {
+        "id":  "windows-11-file-explorer-styler",
+        "disabled":  false,
+        "libraryFileName":  "windows-11-file-explorer-styler_1.4_134021.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.4",
+        "settingsChangeTime":  1783154744,
+        "settings":  {
+                         "xamlDiagnosticsHandling":  "alert",
+                         "explorerFrameContainerHeight":  0,
+                         "backgroundTranslucentEffect":  "",
+                         "styleConstants[0]":  "",
+                         "themeResourceVariables[0]":  "",
+                         "backgroundTranslucentEffectRegion":  "",
+                         "theme":  "TintedGlass",
+                         "controlStyles[0].target":  "",
+                         "controlStyles[0].styles[0]":  ""
+                     }
+    },
+    {
+        "id":  "windows-11-notification-center-styler",
+        "disabled":  false,
+        "libraryFileName":  "windows-11-notification-center-styler_1.5_749022.dll",
+        "include":  "ShellExperienceHost.exe|ShellHost.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.5",
+        "settingsChangeTime":  1783156570,
+        "settings":  {
+                         "themeResourceVariables[0]":  "",
+                         "controlStyles[0].target":  "",
+                         "styleConstants[0]":  "",
+                         "controlStyles[0].styles[0]":  "",
+                         "theme":  "TranslucentShell"
+                     }
+    },
+    {
+        "id":  "windows-11-start-menu-styler",
+        "disabled":  false,
+        "libraryFileName":  "windows-11-start-menu-styler_1.6_395858.dll",
+        "include":  "StartMenuExperienceHost.exe|SearchHost.exe|SearchApp.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.6",
+        "settingsChangeTime":  1783155629,
+        "settings":  {
+                         "webContentCustomJs":  "",
+                         "disableNewStartMenuLayout":  "",
+                         "styleConstants[0]":  "",
+                         "webContentStyles[0].target":  "",
+                         "themeResourceVariables[0]":  "",
+                         "controlStyles[0].styles[0]":  "",
+                         "theme":  "TranslucentStartMenu",
+                         "webContentStyles[0].styles[0]":  "",
+                         "controlStyles[0].target":  ""
+                     }
+    },
+    {
+        "id":  "windows-11-taskbar-styler",
+        "disabled":  false,
+        "libraryFileName":  "windows-11-taskbar-styler_1.7_922291.dll",
+        "include":  "explorer.exe",
+        "exclude":  "",
+        "architecture":  "x86-64",
+        "version":  "1.7",
+        "settingsChangeTime":  1783155870,
+        "settings":  {
+                         "xamlDiagnosticsHandling":  "alert",
+                         "styleConstants[0]":  "",
+                         "themeResourceVariables[0]":  "",
+                         "controlStyles[0].styles[0]":  "",
+                         "theme":  "TranslucentTaskbar",
+                         "controlStyles[0].target":  ""
+                     }
+    }
+]

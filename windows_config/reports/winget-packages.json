@@ -63,10 +63,6 @@
 					"Version" : "9.23.1019"
 				},
 				{
-					"PackageIdentifier" : "valinet.ExplorerPatcher",
-					"Version" : "26100.4946.69.6"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VisualStudio.BuildTools",
 					"Version" : "18.7.2"
 				},

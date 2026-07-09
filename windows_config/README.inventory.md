@@ -8,7 +8,7 @@ User: kotla
 
 - reports: system reports, installed programs, package managers, PATH, dev tool versions, global packages, WSL status.
 - configs: copied safe user configs for Git, SSH public/config files, PowerShell, Windows Terminal, VS Code if present, PowerToys if present, Windows themes if present.
-- registry: exported registry keys for appearance, sounds, cursors, environment variables, Explorer and startup entries.
+- registry: exported registry keys for appearance, sounds, cursors, fonts, environment variables, Explorer and startup entries.
 - scripts: restore notes and commands.
 
 ## Security note
@@ -25,4 +25,10 @@ Review registry exports before sharing this folder, because Windows environment 
 - Machine PATH: reports/path-machine.txt
 - Windows Terminal settings: configs/windows-terminal/settings.json
 - Restore notes: scripts/restore-notes.ps1
+- Windhawk taskbar auto-hide prerequisite: registry/taskbar-autohide.reg
+- Windhawk secondary monitor taskbar auto-hide helper: registry/taskbar-multimonitor.reg and scripts/enable-windhawk-taskbar-per-monitor.ps1
+- Windhawk mod settings: registry/windhawk.reg and utilities/Windhawk_Config/mod-settings.md
+- Segoe Print font restore: scripts/apply-segoe-print-fonts.ps1 plus registry/fonts-*.reg. Run elevated for machine-wide app font aliases.
+- Terminal font restore: scripts/apply-terminal-fonts.ps1, configs/windows-terminal/settings.json, and registry/console-fonts.reg.
+- Cursor pack switcher: cursor_packs/ plus scripts/switch-cursor-pack.ps1 and scripts/cursor-pack-menu.ps1
 
