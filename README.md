@@ -19,6 +19,7 @@ After setup, new terminals can run:
 ```powershell
 egormity_git_tools --help
 egormity_cursors --help
+egormity_startup --help
 python -m egormity_git_tools --help
 ```
 
@@ -69,6 +70,21 @@ egormity_cursors extract <pack-id>
 egormity_cursors source <pack-id>
 egormity_cursors download
 ```
+
+Startup commands on Windows:
+
+```powershell
+egormity_startup list
+egormity_startup list --enabled
+egormity_startup list --disabled
+egormity_startup list --enabled --trim
+egormity_startup enable <name-or-id> [location]
+egormity_startup disable <name-or-id> [location]
+egormity_startup add <name> <command> [--location <HKCU|HKLM|HKCU32|HKLM32>]
+```
+
+`HKLM`, `AllUsers` startup folders, Windows system tasks, and services require
+an administrator terminal for enable, disable, or add operations.
 
 `init_clis` verifies the GitHub CLI (`gh`) and GitLab CLI (`glab`). If either
 CLI is missing, it prompts before installing it with `winget` on Windows or
