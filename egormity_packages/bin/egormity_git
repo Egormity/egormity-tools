@@ -18,4 +18,4 @@ else
     export PYTHONPATH="$tool_root"
 fi
 
-exec "$python_cmd" -m egormity_git_tools "$@"
+exec "$python_cmd" -m egormity_git "$@"

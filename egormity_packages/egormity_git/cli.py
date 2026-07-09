@@ -69,7 +69,7 @@ def main():
         print_help()
         return
     if cmd in ("--version", "--v", "version"):
-        print(f"egormity_git_tools {__version__}")
+        print(f"egormity_git {__version__}")
         return
 
     url = sys.argv[2] if len(sys.argv) > 2 else None
@@ -193,15 +193,15 @@ def main():
 
     else:
         print(f"Unknown command: {cmd}")
-        print("Run `python -m egormity_git_tools --help` for usage.")
+        print("Run `python -m egormity_git --help` for usage.")
 
 
 def print_help():
-    print(f"egormity_git_tools {__version__}")
+    print(f"egormity_git {__version__}")
     print("")
     print("Usage:")
-    print("  egormity_git_tools <command> [args]")
-    print("  python -m egormity_git_tools <command> [args]")
+    print("  egormity_git <command> [args]")
+    print("  python -m egormity_git <command> [args]")
     print("  Use comma or semicolon separated URLs for multi-account commands.")
     print("")
     print("Commands:")
@@ -280,11 +280,11 @@ def display_path(path):
 
 def require_url(cmd, url):
     if not url:
-        raise SystemExit(f"Usage: python -m egormity_git_tools {cmd} <urls> [arg2] [arg3]")
+        raise SystemExit(f"Usage: python -m egormity_git {cmd} <urls> [arg2] [arg3]")
 
 def require_path(cmd, path):
     if not path:
-        raise SystemExit(f"Usage: python -m egormity_git_tools {cmd} <path>")
+        raise SystemExit(f"Usage: python -m egormity_git {cmd} <path>")
 
 if __name__ == "__main__":
     raise SystemExit(run_cli())

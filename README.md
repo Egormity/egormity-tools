@@ -4,7 +4,7 @@ Local command-line tools for managing Egormity development workflows.
 
 ## Current Tool
 
-`egormity_git_tools` automates git workspace tasks for GitHub and GitLab accounts.
+`egormity_git` automates git workspace tasks for GitHub and GitLab accounts.
 
 ## Setup on Windows
 
@@ -17,10 +17,10 @@ npm run setpath
 After setup, new terminals can run:
 
 ```powershell
-egormity_git_tools --help
+egormity_git --help
 egormity_cursors --help
 egormity_startup --help
-python -m egormity_git_tools --help
+python -m egormity_git --help
 ```
 
 ## Setup on macOS
@@ -34,34 +34,35 @@ npm run setpath
 Then open a new terminal, or reload your shell profile:
 
 ```sh
-source "<profile printed by egormity_packages/set_mac_paths.sh>"
+source "<profile printed by scripts/set_mac_paths.sh>"
 ```
 
 After setup, new terminals can run:
 
 ```sh
-egormity_git_tools --help
-python3 -m egormity_git_tools --help
+egormity_git --help
+python3 -m egormity_git --help
 ```
 
 ## Commands
 
 ```powershell
-egormity_git_tools --version
-egormity_git_tools --v
-egormity_git_tools init_clis
-egormity_git_tools get_account_info <urls> [filename] [path]
-egormity_git_tools generate_agents <urls> [folder] [path]
-egormity_git_tools clone_all <urls> [folder] [path]
-egormity_git_tools init <urls> [folder] [path]
-egormity_git_tools pull_all_current_bnach <path>
-egormity_git_tools push_all_current_branch <path>
+egormity_git --version
+egormity_git --v
+egormity_git init_clis
+egormity_git get_account_info <urls> [filename] [path]
+egormity_git generate_agents <urls> [folder] [path]
+egormity_git clone_all <urls> [folder] [path]
+egormity_git init <urls> [folder] [path]
+egormity_git pull_all_current_bnach <path>
+egormity_git push_all_current_branch <path>
 ```
 
 Cursor commands on Windows:
 
 ```powershell
 egormity_cursors
+egormity_cursors --version
 egormity_cursors list
 egormity_cursors apply <pack-id>
 egormity_cursors register <pack-id>
@@ -75,6 +76,7 @@ Startup commands on Windows:
 
 ```powershell
 egormity_startup list
+egormity_startup --version
 egormity_startup list --enabled
 egormity_startup list --disabled
 egormity_startup list --enabled --trim
@@ -99,9 +101,9 @@ For `clone_all`, the optional folder defaults to the account user or group name.
 Multi-account commands accept comma or semicolon separated URLs. Quote the URL list in PowerShell:
 
 ```powershell
-egormity_git_tools clone_all "https://github.com/org-a,https://gitlab.com/group-b" workspace C:\Users\kotla\Desktop\egormity-dev-env
-egormity_git_tools get_account_info "https://github.com/org-a;https://gitlab.com/group-b" info.json .
-egormity_git_tools generate_agents "https://github.com/org-a,https://gitlab.com/group-b" workspace .
+egormity_git clone_all "https://github.com/org-a,https://gitlab.com/group-b" workspace C:\Users\kotla\Desktop\egormity-repos
+egormity_git get_account_info "https://github.com/org-a;https://gitlab.com/group-b" info.json .
+egormity_git generate_agents "https://github.com/org-a,https://gitlab.com/group-b" workspace .
 ```
 
 ## Development
@@ -109,9 +111,9 @@ egormity_git_tools generate_agents "https://github.com/org-a,https://gitlab.com/
 Run basic verification after Python changes:
 
 ```powershell
-python -m egormity_git_tools --help
-python -m egormity_git_tools --version
-python -m compileall egormity_packages\egormity_git_tools
+python -m egormity_git --help
+python -m egormity_git --version
+python -m compileall egormity_packages\egormity_git
 ```
 
 Remove generated `__pycache__` directories before committing.

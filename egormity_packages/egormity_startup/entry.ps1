@@ -5,7 +5,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$startupRoot = Join-Path (Split-Path -Parent $PSScriptRoot) "egormity_startup"
+$startupRoot = $PSScriptRoot
+. (Join-Path $startupRoot "version.ps1")
 . (Join-Path $startupRoot "common.ps1")
 . (Join-Path $startupRoot "list.ps1")
 . (Join-Path $startupRoot "actions.ps1")

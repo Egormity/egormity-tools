@@ -5,8 +5,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$binRoot = $PSScriptRoot
-$packageRoot = Split-Path -Parent $binRoot
+$packageRoot = Split-Path -Parent $PSScriptRoot
 $repoRoot = Split-Path -Parent $packageRoot
 $configScriptsRoot = Join-Path $repoRoot "windows_config\scripts"
 $cursorRoot = Join-Path $repoRoot "windows_config\cursor_packs"
@@ -14,12 +13,14 @@ $manifestPath = Join-Path $cursorRoot "manifest.json"
 $switcher = Join-Path $configScriptsRoot "switch-cursor-pack.ps1"
 $menu = Join-Path $configScriptsRoot "cursor-pack-menu.ps1"
 $downloader = Join-Path $configScriptsRoot "download-cursor-packs.ps1"
+. (Join-Path $PSScriptRoot "version.ps1")
 
 function Show-Help {
     Write-Host "egormity_cursors"
     Write-Host ""
     Write-Host "Usage:"
     Write-Host "  egormity_cursors                         Open the cursor menu"
+    Write-Host "  egormity_cursors --version               Show the installed tool version"
     Write-Host "  egormity_cursors menu                    Open the cursor menu"
     Write-Host "  egormity_cursors list                    List configured cursor packs"
     Write-Host "  egormity_cursors apply <pack-id>         Apply a cursor pack now"
@@ -77,6 +78,10 @@ if ($Arguments -and $Arguments.Count -gt 0) {
 switch ($command) {
     { $_ -in @("help", "--help", "-h", "/?") } {
         Show-Help
+        return
+    }
+    { $_ -in @("version", "--version", "--v") } {
+        Write-Host "egormity_cursors $script:EgormityCursorsVersion"
         return
     }
     "menu" {

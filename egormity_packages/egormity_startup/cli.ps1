@@ -6,6 +6,7 @@ function Show-Help {
     Write-Host "  egormity_startup enable <name-or-id> [location]"
     Write-Host "  egormity_startup disable <name-or-id> [location]"
     Write-Host "  egormity_startup add <name> <command> [--location <HKCU|HKLM|HKCU32|HKLM32>]"
+    Write-Host "  egormity_startup --version"
     Write-Host ""
     Write-Host "Examples:"
     Write-Host "  egormity_startup list --enabled --trim"
@@ -68,6 +69,10 @@ function Invoke-EgormityStartupCli {
     switch ($command) {
         { $_ -in @("help", "--help", "-h", "/?") } {
             Show-Help
+            return
+        }
+        { $_ -in @("version", "--version", "--v") } {
+            Write-Host "egormity_startup $script:EgormityStartupVersion"
             return
         }
         "list" {

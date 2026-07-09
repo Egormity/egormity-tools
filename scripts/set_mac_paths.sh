@@ -1,8 +1,9 @@
 #!/bin/sh
 set -eu
 
-repo_root=$(CDPATH= cd "$(dirname "$0")" && pwd)
-bin_path="$repo_root/bin"
+repo_root=$(CDPATH= cd "$(dirname "$0")/.." && pwd)
+package_root="$repo_root/egormity_packages"
+bin_path="$package_root/bin"
 profile_path=${SHELL_PROFILE:-}
 
 if [ -z "$profile_path" ]; then
@@ -36,9 +37,9 @@ if grep -Fq "$start_marker" "$profile_path"; then
         !skip { print }
     ' "$profile_path" > "$tmp_profile"
     mv "$tmp_profile" "$profile_path"
-    echo "egormity_git_tools shell profile updated:"
+    echo "egormity_git shell profile updated:"
 else
-    echo "egormity_git_tools shell profile configured:"
+    echo "egormity_git shell profile configured:"
 fi
 
 if grep -Fq "$old_start_marker" "$profile_path"; then
@@ -54,20 +55,20 @@ fi
 {
     printf '\n%s\n' "$start_marker"
     printf 'export PATH="%s:$PATH"\n' "$bin_path"
-    printf 'export PYTHONPATH="%s${PYTHONPATH:+:$PYTHONPATH}"\n' "$repo_root"
+    printf 'export PYTHONPATH="%s${PYTHONPATH:+:$PYTHONPATH}"\n' "$package_root"
     printf '%s\n' "$end_marker"
 } >> "$profile_path"
 
 export PATH="$bin_path:$PATH"
-export PYTHONPATH="$repo_root${PYTHONPATH:+:$PYTHONPATH}"
+export PYTHONPATH="$package_root${PYTHONPATH:+:$PYTHONPATH}"
 
 echo "  Profile: $profile_path"
 echo "  PATH: $bin_path"
-echo "  PYTHONPATH: $repo_root"
+echo "  PYTHONPATH: $package_root"
 echo ""
 echo "New terminals can run:"
-echo "  egormity_git_tools"
-echo "  python3 -m egormity_git_tools"
+echo "  egormity_git"
+echo "  python3 -m egormity_git"
 echo ""
 echo "To update this terminal, run:"
 echo "  source \"$profile_path\""
