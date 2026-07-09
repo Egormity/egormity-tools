@@ -1,12 +1,13 @@
 $ErrorActionPreference = "Stop"
 
-$repoRoot = $PSScriptRoot
-$binPath = Join-Path $repoRoot "bin"
-$pythonPaths = @($repoRoot)
+$repoRoot = Split-Path -Parent $PSScriptRoot
+$packageRoot = Join-Path $repoRoot "egormity_packages"
+$binPath = Join-Path $packageRoot "bin"
+$pythonPaths = @($packageRoot)
 $commandPaths = @($binPath)
 $obsoletePaths = @(
-    (Join-Path (Split-Path -Parent $repoRoot) "packages"),
-    (Join-Path (Split-Path -Parent $repoRoot) "packages\bin")
+    (Join-Path $repoRoot "packages"),
+    (Join-Path $repoRoot "packages\bin")
 )
 
 function Add-UniquePathValue {
@@ -68,10 +69,10 @@ $env:PYTHONPATH = Add-UniquePathValue -CurrentValue $env:PYTHONPATH -ValuesToAdd
 
 Write-Host "egormity tools path configured:"
 Write-Host "  PATH: $binPath"
-Write-Host "  PYTHONPATH: $repoRoot"
+Write-Host "  PYTHONPATH: $packageRoot"
 Write-Host ""
 Write-Host "Current terminal is ready. New terminals can run:"
-Write-Host "  egormity_git_tools"
+Write-Host "  egormity_git"
 Write-Host "  egormity_cursors"
 Write-Host "  egormity_startup"
-Write-Host "  python -m egormity_git_tools"
+Write-Host "  python -m egormity_git"

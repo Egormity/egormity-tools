@@ -6,7 +6,7 @@ const isWindows = process.platform === "win32";
 const command = isWindows ? "powershell" : "sh";
 const scriptPath = path.join(
   repoRoot,
-  "egormity_packages",
+  "scripts",
   isWindows ? "set_windows_paths.ps1" : "set_mac_paths.sh",
 );
 const args = isWindows

@@ -8,4 +8,4 @@ if defined PYTHONPATH (
     set "PYTHONPATH=%TOOL_ROOT%"
 )
 
-python -m egormity_git_tools %*
+python -m egormity_git %*

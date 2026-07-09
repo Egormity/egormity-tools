@@ -1,4 +1,6 @@
 {
+  "name": "egormity-tools",
+  "version": "0.4.0",
   "scripts": {
     "cursor:anathema-pink": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId anathema-pink -Apply",
     "cursor:apply": "powershell -ExecutionPolicy Bypass -File windows_config/scripts/switch-cursor-pack.ps1 -PackId %npm_config_pack% -Apply",
