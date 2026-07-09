@@ -1,0 +1,2 @@
+*.sh text eol=lf
+bin/egormity_git_tools text eol=lf

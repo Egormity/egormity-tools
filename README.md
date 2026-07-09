@@ -21,6 +21,28 @@ egormity_git_tools --help
 python -m egormity_git_tools --help
 ```
 
+## Setup on macOS
+
+Run this from the repository root:
+
+```sh
+chmod +x ./set_mac_paths.sh ./bin/egormity_git_tools
+./set_mac_paths.sh
+```
+
+Then open a new terminal, or reload your shell profile:
+
+```sh
+source "<profile printed by set_mac_paths.sh>"
+```
+
+After setup, new terminals can run:
+
+```sh
+egormity_git_tools --help
+python3 -m egormity_git_tools --help
+```
+
 ## Commands
 
 ```powershell
@@ -34,6 +56,14 @@ egormity_git_tools init <urls> [folder] [path]
 egormity_git_tools pull_all_current_bnach <path>
 egormity_git_tools push_all_current_branch <path>
 ```
+
+`init_clis` verifies the GitHub CLI (`gh`) and GitLab CLI (`glab`). If either
+CLI is missing, it prompts before installing it with `winget` on Windows or
+Homebrew on macOS. Account lookup commands also prompt for missing provider
+CLIs before fetching repository metadata. If Homebrew reports non-writable
+Homebrew directories on macOS, the installer offers to repair those permissions
+and retry. If a provider CLI is installed but not authenticated, the command
+prompts to run the provider login flow before continuing.
 
 For `clone_all`, the optional folder defaults to the account user or group name.
 
