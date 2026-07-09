@@ -27,17 +27,17 @@ def discover_repositories(base):
     return sorted(repos)
 
 
-def push(repo_path):
-    print(f"Pushing {repo_path}", flush=True)
-    result = subprocess.run(["git", "push"], cwd=repo_path, capture_output=True, text=True)
+def pull(repo_path):
+    print(f"Pulling {repo_path}", flush=True)
+    result = subprocess.run(["git", "pull"], cwd=repo_path, capture_output=True, text=True)
     if result.returncode != 0:
         output = (result.stderr or result.stdout).strip() or "no output"
-        raise RuntimeError(f"git push failed in {repo_path}: {output}")
+        raise RuntimeError(f"git pull failed in {repo_path}: {output}")
     if result.stdout:
         print(result.stdout.strip())
 
 
-def push_all_current_branch(path):
+def pull_all_current_bnach(path):
     base = Path(path).expanduser().resolve()
     if not base.exists():
         raise FileNotFoundError(f"folder does not exist: {base}")
@@ -50,6 +50,6 @@ def push_all_current_branch(path):
         return []
 
     for repo in repos:
-        push(repo)
+        pull(repo)
 
     return repos

@@ -24,14 +24,26 @@ def clone(repo, base, account_name):
         return path
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["git", "clone", repo["link"], str(path)], check=True)
+    result = subprocess.run(
+        ["git", "clone", repo["link"], str(path)],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        output = (result.stderr or result.stdout).strip() or "no output"
+        raise RuntimeError(f"git clone failed for {repo['link']} into {path}: {output}")
     return path
+
+
+def default_output_folder(info):
+    return info["name"].split("/", 1)[0]
+
 
 def clone_all(url, output_folder=None, base_path=".", info=None):
     info = info or get_info(url)
 
     base_dir = Path(base_path)
-    folder = base_dir / (output_folder or info["name"])
+    folder = base_dir / (output_folder or default_output_folder(info))
     folder.mkdir(parents=True, exist_ok=True)
 
     with ThreadPoolExecutor(max_workers=8) as ex:

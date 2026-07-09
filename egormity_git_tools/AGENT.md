@@ -11,7 +11,9 @@
 
 ## CLI Conventions
 - Keep `--help`, `help`, `-h`, and no-argument output useful and up to date.
-- Keep `--version` wired to `egormity_git_tools/version.py`.
+- Keep `--version` and `--v` wired to `egormity_git_tools/version.py`.
+- Multi-account commands accept comma or semicolon separated URL lists as the first argument.
+- GitLab account lookup should support both users and groups.
 - Prefer adding command implementations as separate modules and dispatching to them from `cli.py`.
 
 ## Current Commands
@@ -20,4 +22,5 @@
 - `generate_agents`
 - `clone_all`
 - `init`
+- `pull_all_current_bnach`
 - `push_all_current_branch`
