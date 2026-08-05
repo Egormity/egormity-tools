@@ -1,0 +1,12 @@
+uuid	name	version	scope	url
+ding@rastersoft.com	Desktop Icons NG (DING)	-	system	https://gitlab.com/rastersoft/desktop-icons-ng
+handy-status@egormity	Handy Status	2	user	-
+lockkeys@vaina.lt	Lock Keys	69	user	https://github.com/kazysmaster/gnome-shell-extension-lockkeys
+notification-timeout@chlumskyvaclav.gmail.com	Notification Timeout	16	user	https://github.com/vchlum/notification-timeout
+snapd-prompting@canonical.com	SNAPD Permission Prompting	-	system	-
+snapd-search-provider@canonical.com	Snapd Search Provider	-	system	https://gitlab.gnome.org/Community/Ubuntu/gnome-shell-snapd-search-provider
+tiling-assistant@ubuntu.com	Ubuntu Tiling Assistant	54	system	https://launchpad.net/ubuntu/+source/gnome-shell-extension-tiling-assistant
+top-bar-organizer@julian.gse.jsts.xyz	Top Bar Organizer	16	user	https://gitlab.gnome.org/june/top-bar-organizer
+ubuntu-appindicators@ubuntu.com	Ubuntu AppIndicators	-	system	https://github.com/ubuntu/gnome-shell-extension-appindicator
+ubuntu-dock@ubuntu.com	Ubuntu Dock	105	system	https://micheleg.github.io/dash-to-dock/
+web-search-provider@ubuntu.com	Web Search Provider	-	system	https://gitlab.gnome.org/Community/Ubuntu/gnome-shell-web-search-provider
