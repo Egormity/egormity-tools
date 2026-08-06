@@ -7,14 +7,17 @@ Captured on 2026-08-06 from Ubuntu 26.04 with GNOME Shell 50.1.
 - `installed-extensions.tsv`: installed user and system extension inventory.
 - `enabled-extensions.gvariant`: the exact `org.gnome.shell enabled-extensions` value.
 - `preferences.dconf`: the exact `/org/gnome/shell/extensions/` preference subtree.
+- `local_extensions/`: source for custom extensions that cannot be installed from an extension catalog.
 
-The snapshot intentionally stores preferences and inventory only. It does not copy extension source code or automatically install missing extensions.
+The snapshot stores preferences, inventory, and the custom Handy status extension. It does not copy third-party extension source code or automatically install missing third-party extensions.
 
 ## Restore
 
 Install the required extensions first, then run:
 
 ```sh
+mkdir -p ~/.local/share/gnome-shell/extensions
+cp -a ubuntu_config/gnome_extensions/local_extensions/. ~/.local/share/gnome-shell/extensions/
 dconf load /org/gnome/shell/extensions/ < ubuntu_config/gnome_extensions/preferences.dconf
 gsettings set org.gnome.shell enabled-extensions "$(cat ubuntu_config/gnome_extensions/enabled-extensions.gvariant)"
 ```

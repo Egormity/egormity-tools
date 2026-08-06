@@ -1,0 +1,7 @@
+{
+  "uuid": "handy-status@egormity",
+  "name": "Handy Status",
+  "description": "Shows Handy's active language and transcription model in the top bar.",
+  "shell-version": ["50"],
+  "version": 3
+}
