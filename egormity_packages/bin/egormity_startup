@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-echo "egormity_startup is a Windows startup helper. Run it from Windows PowerShell or Command Prompt."
-exit 1

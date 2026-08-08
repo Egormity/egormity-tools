@@ -1,4 +1,0 @@
-2026-06-30 10:03:09.365 [info] update#ctor - updates are disabled by user preference
-2026-06-30 10:03:10.546 [info] Starting extension host with pid 10060 (fork() took 11 ms).
-2026-06-30 10:03:14.525 [info] Waiting for extension host with pid 10060 to exit.
-2026-06-30 10:03:14.542 [info] Extension host with pid 10060 exited with code: 0, signal: null.

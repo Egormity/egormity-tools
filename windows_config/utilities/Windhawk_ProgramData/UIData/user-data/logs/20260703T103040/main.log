@@ -1,4 +1,0 @@
-2026-07-03 10:30:41.386 [info] update#ctor - updates are disabled by user preference
-2026-07-03 10:30:42.943 [info] Starting extension host with pid 21880 (fork() took 12 ms).
-2026-07-03 10:32:44.037 [info] Waiting for extension host with pid 21880 to exit.
-2026-07-03 10:32:44.049 [info] Extension host with pid 21880 exited with code: 0, signal: null.
