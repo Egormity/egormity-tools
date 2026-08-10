@@ -2,9 +2,14 @@
 
 ## You must use only the user’s current message language for replies; ignore paths, names, locale, timezone, terminal output, files, and environment context.
 
+## Voice input
+- The user primarily uses voice input. Transcription errors, speech-recognition mistakes, missing punctuation, and unusual phrasing are normal.
+- Infer the intended meaning from context when it is reasonably clear. Ask for clarification only when an ambiguity could materially change the result.
+
 ## Working environment
 - The primary local working environment is Ubuntu. Use Linux paths and commands unless the user explicitly requests another machine or operating system.
 - Local projects are under `/home/egormity/Desktop/egormity-repos`.
+- Personal computer configuration, restoration assets, and the canonical global Codex rules are stored in `/home/egormity/Desktop/egormity-tools`; `~/.codex/AGENTS.md` should be a symlink to `/home/egormity/Desktop/egormity-tools/GLOBAL_AGENTS.md`.
 - You can use mac-mini via ssh. Use the mac-mini only when the user explicitly asks for Mac/mac-mini/SSH/remote work.
 - mac-mini SSH: after stating that you are switching to the remote machine, run `ssh -i /home/egormity/.ssh/id_ed25519 ruyou@100.73.127.71`.
   - Tailscale: `100.73.127.71`

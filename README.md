@@ -2,6 +2,17 @@
 
 Local command-line tools for managing Egormity development workflows.
 
+This repository is also the canonical store for personal computer configuration and restoration assets.
+
+## Global Codex rules on Ubuntu
+
+`GLOBAL_AGENTS.md` is the canonical global Codex instruction file. Keep Codex pointed at it with a symlink so the active rules and the tracked configuration cannot drift apart:
+
+```sh
+mkdir -p /home/egormity/.codex
+ln -sfn /home/egormity/Desktop/egormity-tools/GLOBAL_AGENTS.md /home/egormity/.codex/AGENTS.md
+```
+
 ## Current Tool
 
 `egormity_git_tools` automates git workspace tasks for GitHub and GitLab accounts.
