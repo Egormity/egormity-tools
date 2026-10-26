@@ -29,12 +29,10 @@ After setup, new terminals can run:
 
 ```powershell
 egormity_git_tools --help
-egormity_cursors --help
-egormity_startup --help
 python -m egormity_git_tools --help
 ```
 
-## Setup on macOS
+## Setup on Ubuntu and macOS
 
 Run this from the repository root:
 
@@ -42,10 +40,15 @@ Run this from the repository root:
 npm run setpath
 ```
 
+Setup adds the package commands to `PATH` and the Python packages to
+`PYTHONPATH` in your shell profile (`~/.zshrc`, `~/.bashrc`, or `~/.profile`).
+Set `SHELL_PROFILE` to configure a different profile. Running setup again updates
+the existing configuration.
+
 Then open a new terminal, or reload your shell profile:
 
 ```sh
-source "<profile printed by egormity_packages/set_mac_paths.sh>"
+source "<profile printed by setpath>"
 ```
 
 After setup, new terminals can run:
